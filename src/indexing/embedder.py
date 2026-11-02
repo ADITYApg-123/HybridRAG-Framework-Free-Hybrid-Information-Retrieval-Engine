@@ -44,7 +44,13 @@ class DenseEmbedder:
         self.batch_size = batch_size
         logger.info("Loading SentenceTransformer model '%s'...", model_name)
         self.model = SentenceTransformer(model_name, device=device)
-        self.embedding_dim: int = int(self.model.get_sentence_embedding_dimension() or 384)
+        dim_fn = getattr(
+            self.model,
+            "get_embedding_dimension",
+            self.model.get_sentence_embedding_dimension,
+        )
+        self.embedding_dim: int = int(dim_fn() or 384)
+
 
     def embed_texts(
         self,
