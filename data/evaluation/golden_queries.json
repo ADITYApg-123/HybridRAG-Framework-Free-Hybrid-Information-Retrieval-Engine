@@ -1,0 +1,244 @@
+[
+  {
+    "query_id": "Q01",
+    "category": "lexical_identifier",
+    "query": "What stride restriction applies when using padding='same' in torch.nn.Conv2d?",
+    "expected_doc_id": "torch_nn_conv2d::signature_and_parameters"
+  },
+  {
+    "query_id": "Q02",
+    "category": "semantic_conceptual",
+    "query": "How do you configure a 2D convolutional layer so each input channel is filtered independently in a depthwise separable manner?",
+    "expected_doc_id": "torch_nn_conv2d::shape_and_depthwise_math"
+  },
+  {
+    "query_id": "Q03",
+    "category": "lexical_identifier",
+    "query": "What is the exact floor formula for H_out in Conv2d given dilation and kernel_size?",
+    "expected_doc_id": "torch_nn_conv2d::shape_and_depthwise_math"
+  },
+  {
+    "query_id": "Q04",
+    "category": "hybrid_technical",
+    "query": "Why does torch.nn.MultiheadAttention raise an AssertionError when embed_dim is not divisible by num_heads?",
+    "expected_doc_id": "torch_nn_multihead_attention::scaled_dot_product_overview"
+  },
+  {
+    "query_id": "Q05",
+    "category": "lexical_identifier",
+    "query": "Difference between key_padding_mask (N, S) and attn_mask (L, S) boolean True values in MultiheadAttention.forward",
+    "expected_doc_id": "torch_nn_multihead_attention::masks_and_fastpath"
+  },
+  {
+    "query_id": "Q06",
+    "category": "semantic_conceptual",
+    "query": "How do I trigger the fused FlashAttention fast-path kernel during multi-head attention execution?",
+    "expected_doc_id": "torch_nn_multihead_attention::masks_and_fastpath"
+  },
+  {
+    "query_id": "Q07",
+    "category": "lexical_identifier",
+    "query": "How does BatchNorm2d update running_mean and running_var using momentum=0.1 and eps=1e-05?",
+    "expected_doc_id": "torch_nn_normalization::batchnorm2d_running_stats"
+  },
+  {
+    "query_id": "Q08",
+    "category": "semantic_conceptual",
+    "query": "Which normalization layer computes statistics independently per sample without maintaining running buffers across batches?",
+    "expected_doc_id": "torch_nn_normalization::layernorm_vs_batchnorm"
+  },
+  {
+    "query_id": "Q09",
+    "category": "hybrid_technical",
+    "query": "Why does setting dropout > 0 with num_layers=1 in torch.nn.LSTM trigger a UserWarning?",
+    "expected_doc_id": "torch_nn_recurrent_lstm::lstm_architecture_and_gates"
+  },
+  {
+    "query_id": "Q10",
+    "category": "lexical_identifier",
+    "query": "How to use pack_padded_sequence and pad_packed_sequence with enforce_sorted=False for variable length sequences?",
+    "expected_doc_id": "torch_nn_recurrent_lstm::pack_padded_sequence_handling"
+  },
+  {
+    "query_id": "Q11",
+    "category": "lexical_identifier",
+    "query": "Why should you not apply Softmax before CrossEntropyLoss and what does ignore_index=-100 do?",
+    "expected_doc_id": "torch_nn_losses::crossentropyloss_logits"
+  },
+  {
+    "query_id": "Q12",
+    "category": "semantic_conceptual",
+    "query": "How do I reweight positive examples relative to negative examples in binary classification with imbalanced labels?",
+    "expected_doc_id": "torch_nn_losses::bcewithlogitsloss_pos_weight"
+  },
+  {
+    "query_id": "Q13",
+    "category": "hybrid_technical",
+    "query": "How does AdamW decoupled weight decay differ mathematically from standard Adam L2 regularization?",
+    "expected_doc_id": "torch_optim_adamw::decoupled_weight_decay_math"
+  },
+  {
+    "query_id": "Q14",
+    "category": "semantic_conceptual",
+    "query": "How should 1D bias tensors and normalization scale parameters be configured so they are not penalized by weight decay in Transformers?",
+    "expected_doc_id": "torch_optim_adamw::parameter_groups_no_decay"
+  },
+  {
+    "query_id": "Q15",
+    "category": "lexical_identifier",
+    "query": "In OneCycleLR, how do div_factor=25.0, final_div_factor=10000.0, and pct_start=0.3 control warmup and when is step() called?",
+    "expected_doc_id": "torch_optim_lr_schedulers::onecyclelr_super_convergence"
+  },
+  {
+    "query_id": "Q16",
+    "category": "lexical_identifier",
+    "query": "How do T_0, T_mult, and eta_min work in CosineAnnealingWarmRestarts SGDR?",
+    "expected_doc_id": "torch_optim_lr_schedulers::cosine_annealing_warm_restarts"
+  },
+  {
+    "query_id": "Q17",
+    "category": "semantic_conceptual",
+    "query": "How can I prevent DataLoader from shutting down and recreating worker subprocesses at the end of every training epoch?",
+    "expected_doc_id": "torch_utils_data_dataloader::multiprocess_workers_and_memory"
+  },
+  {
+    "query_id": "Q18",
+    "category": "lexical_identifier",
+    "query": "What does pin_memory=True do in DataLoader when transferring tensors with non_blocking=True?",
+    "expected_doc_id": "torch_utils_data_dataloader::multiprocess_workers_and_memory"
+  },
+  {
+    "query_id": "Q19",
+    "category": "hybrid_technical",
+    "query": "Why must sampler.set_epoch(epoch) be called when using DistributedSampler with DataLoader?",
+    "expected_doc_id": "torch_utils_data_dataloader::custom_collate_fn_and_samplers"
+  },
+  {
+    "query_id": "Q20",
+    "category": "hybrid_technical",
+    "query": "Why is torch.inference_mode() faster than torch.no_grad() regarding view tracking and version counter bumps?",
+    "expected_doc_id": "torch_autograd_mechanics::inference_mode_vs_no_grad"
+  },
+  {
+    "query_id": "Q21",
+    "category": "lexical_identifier",
+    "query": "How to inspect module gradients using register_full_backward_hook and recompute activations via checkpoint(use_reentrant=False)?",
+    "expected_doc_id": "torch_autograd_mechanics::detach_and_backward_hooks"
+  },
+  {
+    "query_id": "Q22",
+    "category": "semantic_conceptual",
+    "query": "How do you prevent exploding gradients in recurrent networks by scaling parameter derivatives down when their combined norm exceeds a threshold?",
+    "expected_doc_id": "torch_nn_grad_clipping::clip_grad_norm_mechanics"
+  },
+  {
+    "query_id": "Q23",
+    "category": "hybrid_technical",
+    "query": "Which operations run in float16 vs float32 inside torch.amp.autocast and why should backward() not be inside autocast?",
+    "expected_doc_id": "torch_amp_mixed_precision::autocast_fp16_bf16"
+  },
+  {
+    "query_id": "Q24",
+    "category": "lexical_identifier",
+    "query": "Why must scaler.unscale_(optimizer) be called before clip_grad_norm_ when using torch.amp.GradScaler?",
+    "expected_doc_id": "torch_amp_mixed_precision::gradscaler_underflow_prevention"
+  },
+  {
+    "query_id": "Q25",
+    "category": "hybrid_technical",
+    "query": "Why is DistributedDataParallel preferred over DataParallel for avoiding GIL contention and how does bucket_cap_mb=25 work?",
+    "expected_doc_id": "torch_distributed_ddp::ddp_vs_dataparallel"
+  },
+  {
+    "query_id": "Q26",
+    "category": "lexical_identifier",
+    "query": "Which environment variable aborts hung NCCL collectives in DistributedDataParallel: TORCH_NCCL_ASYNC_ERROR_HANDLING=1?",
+    "expected_doc_id": "torch_distributed_ddp::ddp_vs_dataparallel"
+  },
+  {
+    "query_id": "Q27",
+    "category": "semantic_conceptual",
+    "query": "How do you skip redundant cross-GPU All-Reduce gradient synchronization during micro-batch gradient accumulation in DDP?",
+    "expected_doc_id": "torch_distributed_ddp::ddp_no_sync_gradient_accumulation"
+  },
+  {
+    "query_id": "Q28",
+    "category": "lexical_identifier",
+    "query": "What is the difference between mode='reduce-overhead' (CUDA Graphs) and mode='max-autotune' in torch.compile with TorchInductor?",
+    "expected_doc_id": "torch_compile_dynamo::torch_compile_modes_and_backends"
+  },
+  {
+    "query_id": "Q29",
+    "category": "lexical_identifier",
+    "query": "What causes graph breaks in TorchDynamo with fullgraph=True and how does torch._dynamo.explain diagnose them?",
+    "expected_doc_id": "torch_compile_dynamo::graph_breaks_and_fullgraph"
+  },
+  {
+    "query_id": "Q30",
+    "category": "lexical_identifier",
+    "query": "How does weights_only=True in torch.load prevent pickle code execution and what do map_location and mmap=True do?",
+    "expected_doc_id": "torch_serialization_checkpoints::weights_only_security_and_map_location"
+  },
+  {
+    "query_id": "Q31",
+    "category": "hybrid_technical",
+    "query": "Why do DistributedDataParallel checkpoints have a 'module.' prefix in state_dict and what does strict=False return?",
+    "expected_doc_id": "torch_serialization_checkpoints::state_dict_ddp_prefix"
+  },
+  {
+    "query_id": "Q32",
+    "category": "lexical_identifier",
+    "query": "Difference between torch.cuda.memory_allocated() and torch.cuda.memory_reserved() and PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True",
+    "expected_doc_id": "torch_cuda_memory_management::caching_allocator_and_empty_cache"
+  },
+  {
+    "query_id": "Q33",
+    "category": "semantic_conceptual",
+    "query": "Does releasing unused cached GPU memory blocks back to the CUDA driver free memory held by live tensors or prevent in-process OOM?",
+    "expected_doc_id": "torch_cuda_memory_management::caching_allocator_and_empty_cache"
+  },
+  {
+    "query_id": "Q34",
+    "category": "lexical_identifier",
+    "query": "When does torch.backends.cudnn.benchmark = True hurt performance and how to configure CUBLAS_WORKSPACE_CONFIG=:4096:8 for determinism?",
+    "expected_doc_id": "torch_cuda_memory_management::cudnn_benchmark_and_determinism"
+  },
+  {
+    "query_id": "Q35",
+    "category": "hybrid_technical",
+    "query": "Why does calling tensor.view() after transpose() or permute() fail on non-contiguous tensors while tensor.reshape() succeeds?",
+    "expected_doc_id": "torch_tensor_views_contiguity::view_vs_reshape_contiguous"
+  },
+  {
+    "query_id": "Q36",
+    "category": "semantic_conceptual",
+    "query": "How do I attach a non-trainable tensor to an nn.Module so it moves to GPU with .to(device) and saves in state_dict without being updated by the optimizer?",
+    "expected_doc_id": "torch_tensor_views_contiguity::register_buffer_vs_parameter"
+  },
+  {
+    "query_id": "Q37",
+    "category": "hybrid_technical",
+    "query": "Compare Dynamic Quantization (quantize_dynamic qint8), Static PTQ (convert_fx), and Quantization-Aware Training (FakeQuantize STE)",
+    "expected_doc_id": "torch_quantization_ao::dynamic_vs_static_ptq_qat"
+  },
+  {
+    "query_id": "Q38",
+    "category": "lexical_identifier",
+    "query": "How does torch.linalg.svd with full_matrices=False compute economy Singular Value Decomposition (U, S, Vh)?",
+    "expected_doc_id": "torch_linalg_svd_einops::linalg_svd_and_einsum"
+  },
+  {
+    "query_id": "Q39",
+    "category": "lexical_identifier",
+    "query": "How to compute batched multi-head attention score contractions using torch.einsum('bhsd,bhtd->bhst', Q, K)?",
+    "expected_doc_id": "torch_linalg_svd_einops::linalg_svd_and_einsum"
+  },
+  {
+    "query_id": "Q40",
+    "category": "semantic_conceptual",
+    "query": "What happens when Inf or NaN gradients are detected during a mixed precision optimizer step?",
+    "expected_doc_id": "torch_amp_mixed_precision::gradscaler_underflow_prevention"
+  }
+]
+
+
