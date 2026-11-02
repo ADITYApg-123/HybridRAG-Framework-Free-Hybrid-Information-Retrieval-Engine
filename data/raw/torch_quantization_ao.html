@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="module" content="torch.ao.quantization" />
+  <meta name="symbol" content="Quantization_PTQ_QAT" />
+  <title>Model Quantization: Dynamic Quantization, Static PTQ, and QAT — PyTorch 2.6 Documentation</title>
+  <script>console.log('analytics boilerplate');</script>
+  <style>.navbar { display: flex; }</style>
+</head>
+<body>
+  <nav class="navbar">PyTorch Navigation Header | Docs | Tutorials</nav>
+  <aside class="sidebar">Table of Contents Sidebar</aside>
+  <main class="document">
+<section id="dynamic_vs_static_ptq_qat" data-module="torch.ao.quantization" data-symbol="Quantization_PTQ_QAT">
+  <h2>Dynamic Quantization vs Static Post-Training Quantization (PTQ) vs QAT<a class="headerlink" href="#dynamic_vs_static_ptq_qat">¶</a></h2>
+  <p>PyTorch offers three INT8 quantization modes: (1) <strong>Dynamic Quantization</strong> (<code>quantize_dynamic</code>) quantizes weights to <code>torch.qint8</code> ahead of time while computing activation scales dynamically at runtime (ideal for LSTMs and Linear layers); (2) <strong>Static PTQ</strong> calibrates activation observers on representative data before <code>convert_fx</code>; (3) <strong>Quantization-Aware Training (QAT)</strong> inserts <code>FakeQuantize</code> modules during training with straight-through estimators (STE).</p>
+</section>
+  </main>
+  <footer class="footer">Copyright PyTorch Contributors.</footer>
+</body>
+</html>

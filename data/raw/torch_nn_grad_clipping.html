@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="module" content="torch.nn.utils" />
+  <meta name="symbol" content="clip_grad_norm_" />
+  <title>Gradient Clipping: clip_grad_norm_ and clip_grad_value_ — PyTorch 2.6 Documentation</title>
+  <script>console.log('analytics boilerplate');</script>
+  <style>.navbar { display: flex; }</style>
+</head>
+<body>
+  <nav class="navbar">PyTorch Navigation Header | Docs | Tutorials</nav>
+  <aside class="sidebar">Table of Contents Sidebar</aside>
+  <main class="document">
+<section id="clip_grad_norm_mechanics" data-module="torch.nn.utils" data-symbol="clip_grad_norm_">
+  <h2>torch.nn.utils.clip_grad_norm_ for Preventing Exploding Gradients<a class="headerlink" href="#clip_grad_norm_mechanics">¶</a></h2>
+  <p><code>torch.nn.utils.clip_grad_norm_(parameters, max_norm, norm_type=2.0, error_if_nonfinite=False)</code></p><p>Clips the total gradient norm of an iterable of parameters in-place to mitigate exploding gradients in RNNs, LSTMs, and Transformers. If the total gradient norm exceeds <code>max_norm</code>, all gradients are scaled uniformly by <code>max_norm / (total_norm + 1e-6)</code>. Call <code>clip_grad_norm_</code> after <code>loss.backward()</code> (and after <code>scaler.unscale_(optimizer)</code>) and before <code>optimizer.step()</code>.</p>
+</section>
+  </main>
+  <footer class="footer">Copyright PyTorch Contributors.</footer>
+</body>
+</html>

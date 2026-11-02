@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="module" content="torch.nn" />
+  <meta name="symbol" content="CrossEntropyLoss_BCEWithLogitsLoss" />
+  <title>torch.nn.CrossEntropyLoss and BCEWithLogitsLoss — PyTorch 2.6 Documentation</title>
+  <script>console.log('analytics boilerplate');</script>
+  <style>.navbar { display: flex; }</style>
+</head>
+<body>
+  <nav class="navbar">PyTorch Navigation Header | Docs | Tutorials</nav>
+  <aside class="sidebar">Table of Contents Sidebar</aside>
+  <main class="document">
+<section id="crossentropyloss_logits" data-module="torch.nn" data-symbol="CrossEntropyLoss_BCEWithLogitsLoss">
+  <h2>torch.nn.CrossEntropyLoss Unnormalized Logits and ignore_index<a class="headerlink" href="#crossentropyloss_logits">¶</a></h2>
+  <p><code>class torch.nn.CrossEntropyLoss(weight=None, ignore_index=-100, reduction='mean', label_smoothing=0.0)</code></p><p>Combines <code>nn.LogSoftmax</code> and <code>nn.NLLLoss</code> in a single numerically stable log-sum-exp pass. Do not apply Softmax before passing inputs to <code>CrossEntropyLoss</code>; pass raw unnormalized logits directly. The parameter <code>ignore_index=-100</code> masks out padding target tokens so they do not contribute to the gradient.</p>
+</section>
+<section id="bcewithlogitsloss_pos_weight" data-module="torch.nn" data-symbol="CrossEntropyLoss_BCEWithLogitsLoss">
+  <h2>torch.nn.BCEWithLogitsLoss Numerical Stability and Class Imbalance<a class="headerlink" href="#bcewithlogitsloss_pos_weight">¶</a></h2>
+  <p><code>class torch.nn.BCEWithLogitsLoss(weight=None, reduction='mean', pos_weight=None)</code></p><p>Fuses a <code>Sigmoid</code> layer and binary cross entropy (<code>BCELoss</code>) using the log-sum-exp trick for numerical stability. To handle positive/negative class imbalance in binary classification, set <code>pos_weight</code> to <code>num_negative_samples / num_positive_samples</code>.</p>
+</section>
+  </main>
+  <footer class="footer">Copyright PyTorch Contributors.</footer>
+</body>
+</html>

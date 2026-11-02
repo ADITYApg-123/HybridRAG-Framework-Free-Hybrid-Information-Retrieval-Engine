@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="module" content="torch.autograd" />
+  <meta name="symbol" content="Autograd_GradMode" />
+  <title>torch.autograd Mechanics: inference_mode, no_grad, and Checkpointing — PyTorch 2.6 Documentation</title>
+  <script>console.log('analytics boilerplate');</script>
+  <style>.navbar { display: flex; }</style>
+</head>
+<body>
+  <nav class="navbar">PyTorch Navigation Header | Docs | Tutorials</nav>
+  <aside class="sidebar">Table of Contents Sidebar</aside>
+  <main class="document">
+<section id="inference_mode_vs_no_grad" data-module="torch.autograd" data-symbol="Autograd_GradMode">
+  <h2>torch.inference_mode vs torch.no_grad Context Managers<a class="headerlink" href="#inference_mode_vs_no_grad">¶</a></h2>
+  <p>Both <code>torch.no_grad()</code> and <code>torch.inference_mode()</code> disable gradient tracking during forward evaluation. However, <code>torch.inference_mode()</code> is faster because it additionally disables <strong>view tracking and version counter bumps</strong> on tensors. Tensors created inside an <code>inference_mode</code> block cannot be modified in-place outside the block or used in autograd backward passes.</p>
+</section>
+<section id="detach_and_backward_hooks" data-module="torch.autograd" data-symbol="Autograd_GradMode">
+  <h2>tensor.detach(), register_full_backward_hook, and Activation Checkpointing<a class="headerlink" href="#detach_and_backward_hooks">¶</a></h2>
+  <p><code>tensor.detach()</code> returns a new tensor view sharing storage with the original tensor but detached from the autograd graph (<code>requires_grad=False</code>). To inspect gradients flowing through a module during backpropagation, use <code>module.register_full_backward_hook(hook_fn)</code>. To reduce GPU activation memory by recomputing forward activations during backward, use <code>torch.utils.checkpoint.checkpoint(block, *inputs, use_reentrant=False)</code>.</p>
+</section>
+  </main>
+  <footer class="footer">Copyright PyTorch Contributors.</footer>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="module" content="torch.nn" />
+  <meta name="symbol" content="MultiheadAttention" />
+  <title>torch.nn.MultiheadAttention — PyTorch 2.6 Documentation</title>
+  <script>console.log('analytics boilerplate');</script>
+  <style>.navbar { display: flex; }</style>
+</head>
+<body>
+  <nav class="navbar">PyTorch Navigation Header | Docs | Tutorials</nav>
+  <aside class="sidebar">Table of Contents Sidebar</aside>
+  <main class="document">
+<section id="scaled_dot_product_overview" data-module="torch.nn" data-symbol="MultiheadAttention">
+  <h2>torch.nn.MultiheadAttention Overview and Scaled Dot-Product Math<a class="headerlink" href="#scaled_dot_product_overview">¶</a></h2>
+  <p><code>class torch.nn.MultiheadAttention(embed_dim, num_heads, dropout=0.0, bias=True, add_bias_kv=False, add_zero_attn=False, kdim=None, vdim=None, batch_first=False)</code></p><p>Computes multi-head scaled dot-product attention: <code>Attention(Q, K, V) = softmax((Q @ K^T) / sqrt(d_k)) @ V</code>. <code>embed_dim</code> must be divisible by <code>num_heads</code> so each head has dimension <code>head_dim = embed_dim // num_heads</code>; otherwise an <code>AssertionError</code> is raised. Setting <code>batch_first=True</code> changes tensor layout from <code>(seq_len, batch, embed_dim)</code> to <code>(batch, seq_len, embed_dim)</code>.</p>
+</section>
+<section id="masks_and_fastpath" data-module="torch.nn" data-symbol="MultiheadAttention">
+  <h2>MultiheadAttention Mask Semantics: key_padding_mask vs attn_mask<a class="headerlink" href="#masks_and_fastpath">¶</a></h2>
+  <p>In <code>MultiheadAttention.forward</code>, <code>key_padding_mask</code> of shape <code>(N, S)</code> masks padding tokens across the source sequence length S, where a boolean <code>True</code> value indicates the corresponding key position is ignored. <code>attn_mask</code> of shape <code>(L, S)</code> prevents attention to specific positions such as future tokens in causal autoregressive decoding.</p><p>When <code>need_weights=False</code>, execution dispatches to the fused <code>torch.nn.functional.scaled_dot_product_attention</code> FlashAttention fast-path kernel.</p>
+</section>
+  </main>
+  <footer class="footer">Copyright PyTorch Contributors.</footer>
+</body>
+</html>

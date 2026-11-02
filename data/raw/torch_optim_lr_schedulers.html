@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="module" content="torch.optim.lr_scheduler" />
+  <meta name="symbol" content="OneCycleLR_CosineAnnealingLR" />
+  <title>Learning Rate Schedulers: OneCycleLR and CosineAnnealingWarmRestarts — PyTorch 2.6 Documentation</title>
+  <script>console.log('analytics boilerplate');</script>
+  <style>.navbar { display: flex; }</style>
+</head>
+<body>
+  <nav class="navbar">PyTorch Navigation Header | Docs | Tutorials</nav>
+  <aside class="sidebar">Table of Contents Sidebar</aside>
+  <main class="document">
+<section id="onecyclelr_super_convergence" data-module="torch.optim.lr_scheduler" data-symbol="OneCycleLR_CosineAnnealingLR">
+  <h2>torch.optim.lr_scheduler.OneCycleLR Super-Convergence Schedule<a class="headerlink" href="#onecyclelr_super_convergence">¶</a></h2>
+  <p><code>class torch.optim.lr_scheduler.OneCycleLR(optimizer, max_lr, total_steps=None, pct_start=0.3, anneal_strategy='cos', div_factor=25.0, final_div_factor=10000.0)</code></p><p>Warms up the learning rate from <code>initial_lr = max_lr / div_factor</code> to <code>max_lr</code> over the first <code>pct_start</code> (default 0.3) fraction of total steps, then anneals down to <code>initial_lr / final_div_factor</code>. Unlike epoch-level schedulers, <code>OneCycleLR.step()</code> must be called after every single training batch iteration.</p>
+</section>
+<section id="cosine_annealing_warm_restarts" data-module="torch.optim.lr_scheduler" data-symbol="OneCycleLR_CosineAnnealingLR">
+  <h2>CosineAnnealingWarmRestarts (SGDR) Periodic Restarts<a class="headerlink" href="#cosine_annealing_warm_restarts">¶</a></h2>
+  <p><code>class torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(optimizer, T_0, T_mult=1, eta_min=0)</code></p><p>Implements Stochastic Gradient Descent with Warm Restarts (SGDR), decaying the learning rate along a cosine curve down to <code>eta_min</code> over <code>T_0</code> iterations before restarting at the maximum learning rate and multiplying the period by <code>T_mult</code>.</p>
+</section>
+  </main>
+  <footer class="footer">Copyright PyTorch Contributors.</footer>
+</body>
+</html>

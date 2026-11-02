@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="module" content="torch.optim" />
+  <meta name="symbol" content="AdamW" />
+  <title>torch.optim.AdamW and Decoupled Weight Decay — PyTorch 2.6 Documentation</title>
+  <script>console.log('analytics boilerplate');</script>
+  <style>.navbar { display: flex; }</style>
+</head>
+<body>
+  <nav class="navbar">PyTorch Navigation Header | Docs | Tutorials</nav>
+  <aside class="sidebar">Table of Contents Sidebar</aside>
+  <main class="document">
+<section id="decoupled_weight_decay_math" data-module="torch.optim" data-symbol="AdamW">
+  <h2>torch.optim.AdamW Decoupled Weight Decay vs L2 Regularization<a class="headerlink" href="#decoupled_weight_decay_math">¶</a></h2>
+  <p><code>class torch.optim.AdamW(params, lr=0.001, betas=(0.9, 0.999), eps=1e-08, weight_decay=0.01, amsgrad=False, fused=None)</code></p><p>Implements AdamW decoupled weight decay regularization. Unlike standard <code>torch.optim.Adam</code> where L2 penalty is added to the gradient before computing adaptive moments <code>m_t</code> and <code>v_t</code>, <code>AdamW</code> subtracts <code>lr * weight_decay * theta_t</code> directly from weights simultaneously with the moment step. Setting <code>fused=True</code> on CUDA launches a single fused multi-tensor kernel update.</p>
+</section>
+<section id="parameter_groups_no_decay" data-module="torch.optim" data-symbol="AdamW">
+  <h2>Excluding Bias and LayerNorm Parameters from Weight Decay<a class="headerlink" href="#parameter_groups_no_decay">¶</a></h2>
+  <p>When training Transformers with <code>AdamW</code>, 1D parameters such as bias vectors and <code>LayerNorm</code> / <code>BatchNorm</code> affine scale weights should be excluded from weight decay (<code>weight_decay=0.0</code>) using optimizer parameter group dicts.</p><pre><code>optim_groups = [
+    {'params': [p for p in model.parameters() if p.dim() >= 2], 'weight_decay': 0.01},
+    {'params': [p for p in model.parameters() if p.dim() < 2], 'weight_decay': 0.0},
+]
+optimizer = torch.optim.AdamW(optim_groups, lr=3e-4, fused=True)</code></pre>
+</section>
+  </main>
+  <footer class="footer">Copyright PyTorch Contributors.</footer>
+</body>
+</html>

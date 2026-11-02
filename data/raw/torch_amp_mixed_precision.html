@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="module" content="torch.amp" />
+  <meta name="symbol" content="autocast_GradScaler" />
+  <title>Automatic Mixed Precision (AMP): torch.amp.autocast and GradScaler — PyTorch 2.6 Documentation</title>
+  <script>console.log('analytics boilerplate');</script>
+  <style>.navbar { display: flex; }</style>
+</head>
+<body>
+  <nav class="navbar">PyTorch Navigation Header | Docs | Tutorials</nav>
+  <aside class="sidebar">Table of Contents Sidebar</aside>
+  <main class="document">
+<section id="autocast_fp16_bf16" data-module="torch.amp" data-symbol="autocast_GradScaler">
+  <h2>torch.amp.autocast Precision Casting Rules (FP16 vs BF16)<a class="headerlink" href="#autocast_fp16_bf16">¶</a></h2>
+  <p><code>class torch.amp.autocast(device_type, dtype=None, enabled=True, cache_enabled=None)</code></p><p>Runs eligible operations (<code>matmul</code>, <code>conv2d</code>, <code>linear</code>, <code>bmm</code>) in <code>float16</code> or <code>bfloat16</code> to reduce GPU VRAM usage and accelerate Tensor Core execution, while keeping reductions and normalization (<code>softmax</code>, <code>LayerNorm</code>, <code>cross_entropy</code>) in <code>float32</code>. Only wrap the forward pass and loss calculation inside <code>with torch.amp.autocast('cuda'):</code>; never wrap <code>loss.backward()</code> inside <code>autocast</code>.</p>
+</section>
+<section id="gradscaler_underflow_prevention" data-module="torch.amp" data-symbol="autocast_GradScaler">
+  <h2>torch.amp.GradScaler Dynamic Loss Scaling and unscale_<a class="headerlink" href="#gradscaler_underflow_prevention">¶</a></h2>
+  <p><code>class torch.amp.GradScaler(device='cuda', init_scale=65536.0, growth_factor=2.0, backoff_factor=0.5, growth_interval=2000)</code></p><p>Prevents small FP16 gradients from underflowing to zero by multiplying the loss by a dynamic scale factor before <code>backward()</code>. Before calling <code>clip_grad_norm_</code>, you must call <code>scaler.unscale_(optimizer)</code> so gradients are clipped at true unscaled magnitudes. If <code>Inf</code> or <code>NaN</code> gradients appear during <code>scaler.step(optimizer)</code>, the optimizer update is skipped and the scale multiplies by <code>backoff_factor</code>.</p>
+</section>
+  </main>
+  <footer class="footer">Copyright PyTorch Contributors.</footer>
+</body>
+</html>

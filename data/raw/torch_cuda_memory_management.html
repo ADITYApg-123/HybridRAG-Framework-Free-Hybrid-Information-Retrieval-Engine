@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="module" content="torch.cuda" />
+  <meta name="symbol" content="CUDA_CachingAllocator" />
+  <title>CUDA Memory Management, Caching Allocator, and Reproducibility — PyTorch 2.6 Documentation</title>
+  <script>console.log('analytics boilerplate');</script>
+  <style>.navbar { display: flex; }</style>
+</head>
+<body>
+  <nav class="navbar">PyTorch Navigation Header | Docs | Tutorials</nav>
+  <aside class="sidebar">Table of Contents Sidebar</aside>
+  <main class="document">
+<section id="caching_allocator_and_empty_cache" data-module="torch.cuda" data-symbol="CUDA_CachingAllocator">
+  <h2>CUDA Caching Allocator, memory_allocated vs memory_reserved, and empty_cache()<a class="headerlink" href="#caching_allocator_and_empty_cache">¶</a></h2>
+  <p>PyTorch manages GPU memory via an asynchronous caching allocator. <code>torch.cuda.memory_allocated()</code> returns bytes occupied by active live tensors, whereas <code>torch.cuda.memory_reserved()</code> returns total bytes held by the allocator pool (active plus cached free blocks). <code>torch.cuda.empty_cache()</code> releases unused cached blocks back to the CUDA driver for other processes, but does not free live tensors. Set <code>PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True</code> to mitigate fragmentation OOMs.</p>
+</section>
+<section id="cudnn_benchmark_and_determinism" data-module="torch.cuda" data-symbol="CUDA_CachingAllocator">
+  <h2>Reproducibility: cudnn.benchmark vs torch.use_deterministic_algorithms<a class="headerlink" href="#cudnn_benchmark_and_determinism">¶</a></h2>
+  <p>Setting <code>torch.backends.cudnn.benchmark = True</code> benchmarks and selects the fastest cuDNN convolution kernel for fixed input shapes, but degrades speed when input tensor shapes vary dynamically each step. For strict bit-wise reproducibility, set <code>torch.backends.cudnn.benchmark = False</code>, <code>torch.backends.cudnn.deterministic = True</code>, and call <code>torch.use_deterministic_algorithms(True)</code> with <code>CUBLAS_WORKSPACE_CONFIG=:4096:8</code>.</p>
+</section>
+  </main>
+  <footer class="footer">Copyright PyTorch Contributors.</footer>
+</body>
+</html>

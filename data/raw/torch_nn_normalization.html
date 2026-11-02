@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="module" content="torch.nn" />
+  <meta name="symbol" content="BatchNorm2d_LayerNorm" />
+  <title>torch.nn.BatchNorm2d and torch.nn.LayerNorm — PyTorch 2.6 Documentation</title>
+  <script>console.log('analytics boilerplate');</script>
+  <style>.navbar { display: flex; }</style>
+</head>
+<body>
+  <nav class="navbar">PyTorch Navigation Header | Docs | Tutorials</nav>
+  <aside class="sidebar">Table of Contents Sidebar</aside>
+  <main class="document">
+<section id="batchnorm2d_running_stats" data-module="torch.nn" data-symbol="BatchNorm2d_LayerNorm">
+  <h2>torch.nn.BatchNorm2d Running Statistics and Momentum<a class="headerlink" href="#batchnorm2d_running_stats">¶</a></h2>
+  <p><code>class torch.nn.BatchNorm2d(num_features, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)</code></p><p>Normalizes 4D inputs <code>(N, C, H, W)</code> per channel across batch and spatial dimensions with default stability constant <code>eps=1e-05</code>. During <code>model.train()</code>, buffers <code>running_mean</code> and <code>running_var</code> update via exponential moving average with <code>momentum=0.1</code>: <code>running_stat_new = (1 - momentum) * running_stat_old + momentum * batch_stat_observed</code>. During <code>model.eval()</code>, running statistics are frozen.</p>
+</section>
+<section id="layernorm_vs_batchnorm" data-module="torch.nn" data-symbol="BatchNorm2d_LayerNorm">
+  <h2>torch.nn.LayerNorm Per-Sample Normalization for Transformers<a class="headerlink" href="#layernorm_vs_batchnorm">¶</a></h2>
+  <p><code>class torch.nn.LayerNorm(normalized_shape, eps=1e-05, elementwise_affine=True, bias=True)</code></p><p>Unlike BatchNorm, <code>LayerNorm</code> computes mean and variance independently per sample across the last D dimensions given by <code>normalized_shape</code>. It maintains no running statistics, behaves identically in <code>train()</code> and <code>eval()</code> modes, and is invariant to batch size for Transformer sequences.</p>
+</section>
+  </main>
+  <footer class="footer">Copyright PyTorch Contributors.</footer>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="module" content="torch.nn" />
+  <meta name="symbol" content="Conv2d" />
+  <title>torch.nn.Conv2d — PyTorch 2.6 Documentation</title>
+  <script>console.log('analytics boilerplate');</script>
+  <style>.navbar { display: flex; }</style>
+</head>
+<body>
+  <nav class="navbar">PyTorch Navigation Header | Docs | Tutorials</nav>
+  <aside class="sidebar">Table of Contents Sidebar</aside>
+  <main class="document">
+<section id="signature_and_parameters" data-module="torch.nn" data-symbol="Conv2d">
+  <h2>torch.nn.Conv2d Signature and Parameters<a class="headerlink" href="#signature_and_parameters">¶</a></h2>
+  <p><code>class torch.nn.Conv2d(in_channels, out_channels, kernel_size, stride=1, padding=0, dilation=1, groups=1, bias=True, padding_mode='zeros')</code></p><p>Applies a 2D convolution over an input signal composed of several input planes. <code>in_channels</code> specifies channels in the input image; <code>out_channels</code> specifies channels produced by the convolution filters. <code>padding='same'</code> pads the input so the output has the same height and width as the input, but <code>padding='same'</code> cannot be used with any stride value other than <code>stride=1</code>. Supported <code>padding_mode</code> values are <code>'zeros'</code>, <code>'reflect'</code>, <code>'replicate'</code>, and <code>'circular'</code>.</p>
+</section>
+<section id="shape_and_depthwise_math" data-module="torch.nn" data-symbol="Conv2d">
+  <h2>Conv2d Output Spatial Shape Formula and Depthwise Convolution<a class="headerlink" href="#shape_and_depthwise_math">¶</a></h2>
+  <p>For an input tensor of shape <code>(N, C_in, H_in, W_in)</code>, the spatial output height and width of <code>torch.nn.Conv2d</code> are computed using the floor equation: <code>H_out = floor((H_in + 2 * padding[0] - dilation[0] * (kernel_size[0] - 1) - 1) / stride[0] + 1)</code>.</p><p>When <code>groups == in_channels</code> and <code>out_channels == K * in_channels</code>, this configuration performs a <strong>depthwise separable convolution</strong> where each input channel is convolved with its own separate set of K filters.</p><pre><code>depthwise = nn.Conv2d(32, 32, kernel_size=3, padding=1, groups=32)
+pointwise = nn.Conv2d(32, 64, kernel_size=1)</code></pre>
+</section>
+  </main>
+  <footer class="footer">Copyright PyTorch Contributors.</footer>
+</body>
+</html>

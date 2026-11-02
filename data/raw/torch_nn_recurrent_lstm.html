@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="module" content="torch.nn" />
+  <meta name="symbol" content="LSTM" />
+  <title>torch.nn.LSTM — PyTorch 2.6 Documentation</title>
+  <script>console.log('analytics boilerplate');</script>
+  <style>.navbar { display: flex; }</style>
+</head>
+<body>
+  <nav class="navbar">PyTorch Navigation Header | Docs | Tutorials</nav>
+  <aside class="sidebar">Table of Contents Sidebar</aside>
+  <main class="document">
+<section id="lstm_architecture_and_gates" data-module="torch.nn" data-symbol="LSTM">
+  <h2>torch.nn.LSTM Gate Equations and Hidden States<a class="headerlink" href="#lstm_architecture_and_gates">¶</a></h2>
+  <p><code>class torch.nn.LSTM(input_size, hidden_size, num_layers=1, bias=True, batch_first=False, dropout=0.0, bidirectional=False)</code></p><p>Applies a multi-layer Long Short-Term Memory (LSTM) recurrent neural network. At each timestep t, the cell maintains hidden state <code>h_t</code> and cell state <code>c_t</code> regulated by input gate <code>i_t</code>, forget gate <code>f_t</code>, cell candidate <code>g_t</code>, and output gate <code>o_t</code>. When <code>bidirectional=True</code>, output hidden dimension doubles to <code>2 * hidden_size</code>. Note: <code>dropout</code> applies between stacked layers except the last layer, so setting <code>dropout &gt; 0</code> with <code>num_layers=1</code> triggers a UserWarning and has no effect.</p>
+</section>
+<section id="pack_padded_sequence_handling" data-module="torch.nn" data-symbol="LSTM">
+  <h2>Handling Variable-Length Sequences with pack_padded_sequence<a class="headerlink" href="#pack_padded_sequence_handling">¶</a></h2>
+  <p>To prevent recurrent layers like <code>nn.LSTM</code> from wasting computation over trailing padding tokens, wrap padded batches using <code>torch.nn.utils.rnn.pack_padded_sequence(input, lengths, batch_first=True, enforce_sorted=False)</code> before the LSTM, and unpack outputs back to padded tensors using <code>torch.nn.utils.rnn.pad_packed_sequence</code>.</p>
+</section>
+  </main>
+  <footer class="footer">Copyright PyTorch Contributors.</footer>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="module" content="torch.utils.data" />
+  <meta name="symbol" content="DataLoader" />
+  <title>torch.utils.data.DataLoader — PyTorch 2.6 Documentation</title>
+  <script>console.log('analytics boilerplate');</script>
+  <style>.navbar { display: flex; }</style>
+</head>
+<body>
+  <nav class="navbar">PyTorch Navigation Header | Docs | Tutorials</nav>
+  <aside class="sidebar">Table of Contents Sidebar</aside>
+  <main class="document">
+<section id="multiprocess_workers_and_memory" data-module="torch.utils.data" data-symbol="DataLoader">
+  <h2>DataLoader Multiprocessing, pin_memory, and persistent_workers<a class="headerlink" href="#multiprocess_workers_and_memory">¶</a></h2>
+  <p><code>class torch.utils.data.DataLoader(dataset, batch_size=1, shuffle=False, sampler=None, num_workers=0, collate_fn=None, pin_memory=False, drop_last=False, prefetch_factor=None, persistent_workers=False)</code></p><p>Setting <code>pin_memory=True</code> allocates fetched host tensors in page-locked (pinned) RAM for fast asynchronous DMA transfers to CUDA GPUs via <code>tensor.to(device, non_blocking=True)</code>. Setting <code>persistent_workers=True</code> keeps worker subprocesses alive across epochs instead of shutting down and respawning workers after every epoch. Default <code>prefetch_factor</code> is 2 when <code>num_workers &gt; 0</code>.</p>
+</section>
+<section id="custom_collate_fn_and_samplers" data-module="torch.utils.data" data-symbol="DataLoader">
+  <h2>Custom collate_fn and DistributedSampler Usage<a class="headerlink" href="#custom_collate_fn_and_samplers">¶</a></h2>
+  <p>The <code>collate_fn</code> callable merges a list of dataset samples into a mini-batch and handles variable-length sequence padding. In multi-GPU training with <code>DistributedSampler</code>, set <code>shuffle=False</code> on the DataLoader and call <code>sampler.set_epoch(epoch)</code> at the start of every epoch to guarantee deterministic random shuffling across epochs.</p>
+</section>
+  </main>
+  <footer class="footer">Copyright PyTorch Contributors.</footer>
+</body>
+</html>

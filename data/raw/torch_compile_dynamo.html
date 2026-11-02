@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="module" content="torch" />
+  <meta name="symbol" content="compile" />
+  <title>torch.compile, TorchDynamo, and TorchInductor — PyTorch 2.6 Documentation</title>
+  <script>console.log('analytics boilerplate');</script>
+  <style>.navbar { display: flex; }</style>
+</head>
+<body>
+  <nav class="navbar">PyTorch Navigation Header | Docs | Tutorials</nav>
+  <aside class="sidebar">Table of Contents Sidebar</aside>
+  <main class="document">
+<section id="torch_compile_modes_and_backends" data-module="torch" data-symbol="compile">
+  <h2>torch.compile Compilation Pipeline and Optimization Modes<a class="headerlink" href="#torch_compile_modes_and_backends">¶</a></h2>
+  <p><code>torch.compile(model=None, *, fullgraph=False, dynamic=None, backend='inductor', mode=None)</code></p><p>Captures Python bytecode into FX graphs via <strong>TorchDynamo</strong>, traces backward passes with <strong>AOTAutograd</strong>, and generates fused Triton (GPU) or C++/OpenMP (CPU) kernels via <strong>TorchInductor</strong>. <code>mode='reduce-overhead'</code> uses CUDA Graphs to minimize launch overhead for small batches; <code>mode='max-autotune'</code> benchmarks Triton matrix multiplication templates and CUDA graphs for peak throughput.</p>
+</section>
+<section id="graph_breaks_and_fullgraph" data-module="torch" data-symbol="compile">
+  <h2>Graph Breaks, Data-Dependent Control Flow, and fullgraph=True<a class="headerlink" href="#graph_breaks_and_fullgraph">¶</a></h2>
+  <p>When TorchDynamo encounters data-dependent control flow (<code>if tensor.sum() &gt; 0:</code>) or <code>.item()</code> calls, it inserts a <strong>graph break</strong>, falling back to Python between compiled subgraphs. Passing <code>fullgraph=True</code> raises an error if any graph break occurs. Use <code>torch._dynamo.explain(model)(*inputs)</code> to diagnose graph breaks.</p>
+</section>
+  </main>
+  <footer class="footer">Copyright PyTorch Contributors.</footer>
+</body>
+</html>

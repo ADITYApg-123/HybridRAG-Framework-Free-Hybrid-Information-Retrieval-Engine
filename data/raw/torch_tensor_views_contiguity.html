@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="module" content="torch" />
+  <meta name="symbol" content="Tensor_Views_Contiguity" />
+  <title>Tensor Views, Memory Strides, view() vs reshape(), and register_buffer — PyTorch 2.6 Documentation</title>
+  <script>console.log('analytics boilerplate');</script>
+  <style>.navbar { display: flex; }</style>
+</head>
+<body>
+  <nav class="navbar">PyTorch Navigation Header | Docs | Tutorials</nav>
+  <aside class="sidebar">Table of Contents Sidebar</aside>
+  <main class="document">
+<section id="view_vs_reshape_contiguous" data-module="torch" data-symbol="Tensor_Views_Contiguity">
+  <h2>Memory Strides, Contiguity, and tensor.view() vs tensor.reshape()<a class="headerlink" href="#view_vs_reshape_contiguous">¶</a></h2>
+  <p>Operations like <code>transpose()</code> and <code>permute()</code> return a view sharing storage with modified strides, making the tensor non-contiguous (<code>tensor.is_contiguous() == False</code>). Calling <code>tensor.view(*shape)</code> on a non-contiguous tensor raises a <code>RuntimeError</code> unless <code>tensor.contiguous().view(*shape)</code> is called first. <code>tensor.reshape(*shape)</code> returns a view when contiguous and copies data automatically when non-contiguous.</p>
+</section>
+<section id="register_buffer_vs_parameter" data-module="torch" data-symbol="Tensor_Views_Contiguity">
+  <h2>nn.Module.register_buffer vs nn.Parameter for Non-Trainable State<a class="headerlink" href="#register_buffer_vs_parameter">¶</a></h2>
+  <p><code>Module.register_buffer(name, tensor, persistent=True)</code> registers a non-trainable tensor state that is not updated by optimizers and is excluded from <code>model.parameters()</code>, yet moves automatically with <code>model.to(device)</code> and is saved in <code>model.state_dict()</code> (unless <code>persistent=False</code>).</p>
+</section>
+  </main>
+  <footer class="footer">Copyright PyTorch Contributors.</footer>
+</body>
+</html>

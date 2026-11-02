@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="module" content="torch" />
+  <meta name="symbol" content="save_load_state_dict" />
+  <title>Serialization and Checkpointing: torch.save, torch.load, and state_dict — PyTorch 2.6 Documentation</title>
+  <script>console.log('analytics boilerplate');</script>
+  <style>.navbar { display: flex; }</style>
+</head>
+<body>
+  <nav class="navbar">PyTorch Navigation Header | Docs | Tutorials</nav>
+  <aside class="sidebar">Table of Contents Sidebar</aside>
+  <main class="document">
+<section id="weights_only_security_and_map_location" data-module="torch" data-symbol="save_load_state_dict">
+  <h2>Secure Checkpoint Loading with weights_only=True and map_location<a class="headerlink" href="#weights_only_security_and_map_location">¶</a></h2>
+  <p><code>torch.load(f, map_location=None, *, weights_only=True, mmap=None)</code></p><p>Passing <code>weights_only=True</code> prevents arbitrary pickle code execution by restricting deserialization to tensors and primitive dicts. Use <code>map_location=torch.device('cpu')</code> when loading GPU checkpoints onto CPU or remapping across distributed ranks, and <code>mmap=True</code> to memory-map large checkpoint files without spiking host RAM.</p>
+</section>
+<section id="state_dict_ddp_prefix" data-module="torch" data-symbol="save_load_state_dict">
+  <h2>Handling state_dict strict=False and DDP 'module.' Key Prefix<a class="headerlink" href="#state_dict_ddp_prefix">¶</a></h2>
+  <p><code>model.load_state_dict(state_dict, strict=False)</code> returns <code>IncompatibleKeys(missing_keys, unexpected_keys)</code> without raising an error when fine-tuning modified heads. Because <code>DistributedDataParallel</code> prepends the prefix <code>'module.'</code> to all parameter keys, save <code>ddp_model.module.state_dict()</code> for portable checkpoints.</p>
+</section>
+  </main>
+  <footer class="footer">Copyright PyTorch Contributors.</footer>
+</body>
+</html>

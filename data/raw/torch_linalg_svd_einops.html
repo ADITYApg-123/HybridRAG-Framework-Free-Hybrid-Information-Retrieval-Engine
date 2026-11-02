@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="module" content="torch.linalg" />
+  <meta name="symbol" content="linalg_svd_einsum" />
+  <title>Linear Algebra Operations: torch.linalg.svd and torch.einsum — PyTorch 2.6 Documentation</title>
+  <script>console.log('analytics boilerplate');</script>
+  <style>.navbar { display: flex; }</style>
+</head>
+<body>
+  <nav class="navbar">PyTorch Navigation Header | Docs | Tutorials</nav>
+  <aside class="sidebar">Table of Contents Sidebar</aside>
+  <main class="document">
+<section id="linalg_svd_and_einsum" data-module="torch.linalg" data-symbol="linalg_svd_einsum">
+  <h2>torch.linalg.svd Singular Value Decomposition and torch.einsum<a class="headerlink" href="#linalg_svd_and_einsum">¶</a></h2>
+  <p><code>torch.linalg.svd(A, full_matrices=True)</code> computes the Singular Value Decomposition <code>(U, S, Vh)</code> where <code>A = U @ diag(S) @ Vh</code>. Setting <code>full_matrices=False</code> computes the reduced economy SVD of dimension <code>k = min(m, n)</code>. <code>torch.einsum(equation, *operands)</code> evaluates multilinear Einstein summation contractions such as <code>torch.einsum('bhsd,bhtd-&gt;bhst', Q, K)</code>.</p>
+</section>
+  </main>
+  <footer class="footer">Copyright PyTorch Contributors.</footer>
+</body>
+</html>

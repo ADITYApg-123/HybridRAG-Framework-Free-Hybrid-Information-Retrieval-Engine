@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="module" content="torch.distributed" />
+  <meta name="symbol" content="DistributedDataParallel" />
+  <title>torch.nn.parallel.DistributedDataParallel (DDP) — PyTorch 2.6 Documentation</title>
+  <script>console.log('analytics boilerplate');</script>
+  <style>.navbar { display: flex; }</style>
+</head>
+<body>
+  <nav class="navbar">PyTorch Navigation Header | Docs | Tutorials</nav>
+  <aside class="sidebar">Table of Contents Sidebar</aside>
+  <main class="document">
+<section id="ddp_vs_dataparallel" data-module="torch.distributed" data-symbol="DistributedDataParallel">
+  <h2>DistributedDataParallel Architecture and All-Reduce Gradient Bucketing<a class="headerlink" href="#ddp_vs_dataparallel">¶</a></h2>
+  <p><code>class torch.nn.parallel.DistributedDataParallel(module, device_ids=None, broadcast_buffers=True, find_unused_parameters=False, gradient_as_bucket_view=False, static_graph=False)</code></p><p>Implements multi-process data parallelism and is strongly preferred over single-process multi-threaded <code>torch.nn.DataParallel</code> (which suffers from Python GIL contention). DDP spawns one process per GPU via <code>torchrun</code>, initializes with <code>torch.distributed.init_process_group(backend='nccl')</code>, and overlaps backward pass computation with ring All-Reduce communication across gradient buckets (<code>bucket_cap_mb=25</code>). Set <code>TORCH_NCCL_ASYNC_ERROR_HANDLING=1</code> to abort hung NCCL collectives.</p>
+</section>
+<section id="ddp_no_sync_gradient_accumulation" data-module="torch.distributed" data-symbol="DistributedDataParallel">
+  <h2>Accelerating Gradient Accumulation in DDP with model.no_sync()<a class="headerlink" href="#ddp_no_sync_gradient_accumulation">¶</a></h2>
+  <p>When accumulating gradients over K micro-batches in <code>DistributedDataParallel</code>, wrap the first K-1 micro-batch forward and backward passes inside <code>with ddp_model.no_sync():</code> to suppress redundant cross-GPU All-Reduce communications until the final synchronizing step.</p>
+</section>
+  </main>
+  <footer class="footer">Copyright PyTorch Contributors.</footer>
+</body>
+</html>
