@@ -8,43 +8,44 @@
   {
     "query_id": "Q02",
     "category": "semantic_conceptual",
-    "query": "How do you configure a 2D convolutional layer so each input channel is filtered independently in a depthwise separable manner?",
+    "query": "How do I apply independent spatial filters to each individual input plane without mixing information across channels?",
     "expected_doc_id": "torch_nn_conv2d::shape_and_depthwise_math"
   },
   {
     "query_id": "Q03",
     "category": "lexical_identifier",
-    "query": "What is the exact floor formula for H_out in Conv2d given dilation and kernel_size?",
+    "query": "H_out floor dilation[0] kernel_size[0] stride[0] padding[0]",
     "expected_doc_id": "torch_nn_conv2d::shape_and_depthwise_math"
   },
   {
     "query_id": "Q04",
-    "category": "hybrid_technical",
-    "query": "Why does torch.nn.MultiheadAttention raise an AssertionError when embed_dim is not divisible by num_heads?",
+    "category": "lexical_identifier",
+    "query": "add_bias_kv=False add_zero_attn=False",
     "expected_doc_id": "torch_nn_multihead_attention::scaled_dot_product_overview"
   },
+
   {
     "query_id": "Q05",
     "category": "lexical_identifier",
-    "query": "Difference between key_padding_mask (N, S) and attn_mask (L, S) boolean True values in MultiheadAttention.forward",
+    "query": "key_padding_mask (N, S) vs attn_mask (L, S) boolean True",
     "expected_doc_id": "torch_nn_multihead_attention::masks_and_fastpath"
   },
   {
     "query_id": "Q06",
     "category": "semantic_conceptual",
-    "query": "How do I trigger the fused FlashAttention fast-path kernel during multi-head attention execution?",
+    "query": "How do I enable hardware-accelerated memory-efficient attention by skipping explicit return of attention weights?",
     "expected_doc_id": "torch_nn_multihead_attention::masks_and_fastpath"
   },
   {
     "query_id": "Q07",
     "category": "lexical_identifier",
-    "query": "How does BatchNorm2d update running_mean and running_var using momentum=0.1 and eps=1e-05?",
+    "query": "running_stat_new (1 - momentum) running_stat_old eps=1e-05",
     "expected_doc_id": "torch_nn_normalization::batchnorm2d_running_stats"
   },
   {
     "query_id": "Q08",
     "category": "semantic_conceptual",
-    "query": "Which normalization layer computes statistics independently per sample without maintaining running buffers across batches?",
+    "query": "Which normalization technique standardizes activations within each individual sequence example and works identically during training and inference?",
     "expected_doc_id": "torch_nn_normalization::layernorm_vs_batchnorm"
   },
   {
@@ -56,19 +57,19 @@
   {
     "query_id": "Q10",
     "category": "lexical_identifier",
-    "query": "How to use pack_padded_sequence and pad_packed_sequence with enforce_sorted=False for variable length sequences?",
+    "query": "pack_padded_sequence pad_packed_sequence enforce_sorted=False",
     "expected_doc_id": "torch_nn_recurrent_lstm::pack_padded_sequence_handling"
   },
   {
     "query_id": "Q11",
     "category": "lexical_identifier",
-    "query": "Why should you not apply Softmax before CrossEntropyLoss and what does ignore_index=-100 do?",
+    "query": "ignore_index=-100 label_smoothing=0.0 LogSoftmax NLLLoss",
     "expected_doc_id": "torch_nn_losses::crossentropyloss_logits"
   },
   {
     "query_id": "Q12",
     "category": "semantic_conceptual",
-    "query": "How do I reweight positive examples relative to negative examples in binary classification with imbalanced labels?",
+    "query": "How can I trade off precision and recall on rare positive targets in binary classification with skewed class frequencies?",
     "expected_doc_id": "torch_nn_losses::bcewithlogitsloss_pos_weight"
   },
   {
@@ -80,27 +81,29 @@
   {
     "query_id": "Q14",
     "category": "semantic_conceptual",
-    "query": "How should 1D bias tensors and normalization scale parameters be configured so they are not penalized by weight decay in Transformers?",
+    "query": "Configuring optimizer parameter dictionaries so 1D biases and normalization weights have zero weight_decay",
     "expected_doc_id": "torch_optim_adamw::parameter_groups_no_decay"
   },
   {
     "query_id": "Q15",
     "category": "lexical_identifier",
-    "query": "In OneCycleLR, how do div_factor=25.0, final_div_factor=10000.0, and pct_start=0.3 control warmup and when is step() called?",
+    "query": "div_factor=25.0 final_div_factor=10000.0",
     "expected_doc_id": "torch_optim_lr_schedulers::onecyclelr_super_convergence"
   },
+
   {
     "query_id": "Q16",
     "category": "lexical_identifier",
-    "query": "How do T_0, T_mult, and eta_min work in CosineAnnealingWarmRestarts SGDR?",
+    "query": "T_0 T_mult=1 eta_min=0 SGDR",
     "expected_doc_id": "torch_optim_lr_schedulers::cosine_annealing_warm_restarts"
   },
   {
     "query_id": "Q17",
     "category": "semantic_conceptual",
-    "query": "How can I prevent DataLoader from shutting down and recreating worker subprocesses at the end of every training epoch?",
+    "query": "How can I avoid the overhead of tearing down and respawning background data-fetching processes between training epochs?",
     "expected_doc_id": "torch_utils_data_dataloader::multiprocess_workers_and_memory"
   },
+
   {
     "query_id": "Q18",
     "category": "lexical_identifier",
@@ -128,15 +131,16 @@
   {
     "query_id": "Q22",
     "category": "semantic_conceptual",
-    "query": "How do you prevent exploding gradients in recurrent networks by scaling parameter derivatives down when their combined norm exceeds a threshold?",
+    "query": "How to prevent unstable derivative explosions in deep sequence models by capping vector magnitude?",
     "expected_doc_id": "torch_nn_grad_clipping::clip_grad_norm_mechanics"
   },
   {
     "query_id": "Q23",
-    "category": "hybrid_technical",
-    "query": "Which operations run in float16 vs float32 inside torch.amp.autocast and why should backward() not be inside autocast?",
+    "category": "semantic_conceptual",
+    "query": "Speeding up neural network matrix multiplications on Tensor Cores using half-precision floating point",
     "expected_doc_id": "torch_amp_mixed_precision::autocast_fp16_bf16"
   },
+
   {
     "query_id": "Q24",
     "category": "lexical_identifier",
@@ -152,31 +156,31 @@
   {
     "query_id": "Q26",
     "category": "lexical_identifier",
-    "query": "Which environment variable aborts hung NCCL collectives in DistributedDataParallel: TORCH_NCCL_ASYNC_ERROR_HANDLING=1?",
+    "query": "TORCH_NCCL_ASYNC_ERROR_HANDLING=1 bucket_cap_mb=25",
     "expected_doc_id": "torch_distributed_ddp::ddp_vs_dataparallel"
   },
   {
     "query_id": "Q27",
     "category": "semantic_conceptual",
-    "query": "How do you skip redundant cross-GPU All-Reduce gradient synchronization during micro-batch gradient accumulation in DDP?",
+    "query": "How do you postpone cross-worker gradient synchronization when accumulating derivatives over multiple mini-batches?",
     "expected_doc_id": "torch_distributed_ddp::ddp_no_sync_gradient_accumulation"
   },
   {
     "query_id": "Q28",
     "category": "lexical_identifier",
-    "query": "What is the difference between mode='reduce-overhead' (CUDA Graphs) and mode='max-autotune' in torch.compile with TorchInductor?",
+    "query": "mode='reduce-overhead' mode='max-autotune' AOTAutograd",
     "expected_doc_id": "torch_compile_dynamo::torch_compile_modes_and_backends"
   },
   {
     "query_id": "Q29",
     "category": "lexical_identifier",
-    "query": "What causes graph breaks in TorchDynamo with fullgraph=True and how does torch._dynamo.explain diagnose them?",
+    "query": "torch._dynamo.explain fullgraph=True .item()",
     "expected_doc_id": "torch_compile_dynamo::graph_breaks_and_fullgraph"
   },
   {
     "query_id": "Q30",
     "category": "lexical_identifier",
-    "query": "How does weights_only=True in torch.load prevent pickle code execution and what do map_location and mmap=True do?",
+    "query": "weights_only=True map_location mmap=True",
     "expected_doc_id": "torch_serialization_checkpoints::weights_only_security_and_map_location"
   },
   {
@@ -188,19 +192,19 @@
   {
     "query_id": "Q32",
     "category": "lexical_identifier",
-    "query": "Difference between torch.cuda.memory_allocated() and torch.cuda.memory_reserved() and PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True",
+    "query": "PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True",
     "expected_doc_id": "torch_cuda_memory_management::caching_allocator_and_empty_cache"
   },
   {
     "query_id": "Q33",
     "category": "semantic_conceptual",
-    "query": "Does releasing unused cached GPU memory blocks back to the CUDA driver free memory held by live tensors or prevent in-process OOM?",
+    "query": "Why does GPU driver memory stay reserved after tensors are deleted and how do you return unoccupied blocks to the operating system?",
     "expected_doc_id": "torch_cuda_memory_management::caching_allocator_and_empty_cache"
   },
   {
     "query_id": "Q34",
     "category": "lexical_identifier",
-    "query": "When does torch.backends.cudnn.benchmark = True hurt performance and how to configure CUBLAS_WORKSPACE_CONFIG=:4096:8 for determinism?",
+    "query": "CUBLAS_WORKSPACE_CONFIG=:4096:8",
     "expected_doc_id": "torch_cuda_memory_management::cudnn_benchmark_and_determinism"
   },
   {
@@ -212,9 +216,10 @@
   {
     "query_id": "Q36",
     "category": "semantic_conceptual",
-    "query": "How do I attach a non-trainable tensor to an nn.Module so it moves to GPU with .to(device) and saves in state_dict without being updated by the optimizer?",
+    "query": "Attaching non-learnable state tensors to a module so they move to GPU and persist in checkpoints",
     "expected_doc_id": "torch_tensor_views_contiguity::register_buffer_vs_parameter"
   },
+
   {
     "query_id": "Q37",
     "category": "hybrid_technical",
@@ -224,21 +229,22 @@
   {
     "query_id": "Q38",
     "category": "lexical_identifier",
-    "query": "How does torch.linalg.svd with full_matrices=False compute economy Singular Value Decomposition (U, S, Vh)?",
+    "query": "full_matrices=False U @ diag(S) @ Vh",
     "expected_doc_id": "torch_linalg_svd_einops::linalg_svd_and_einsum"
   },
   {
     "query_id": "Q39",
     "category": "lexical_identifier",
-    "query": "How to compute batched multi-head attention score contractions using torch.einsum('bhsd,bhtd->bhst', Q, K)?",
+    "query": "'bhsd,bhtd->bhst'",
     "expected_doc_id": "torch_linalg_svd_einops::linalg_svd_and_einsum"
   },
   {
     "query_id": "Q40",
     "category": "semantic_conceptual",
-    "query": "What happens when Inf or NaN gradients are detected during a mixed precision optimizer step?",
+    "query": "How does dynamic loss scaling recover when a 16-bit backward pass overflows into invalid floating-point numbers?",
     "expected_doc_id": "torch_amp_mixed_precision::gradscaler_underflow_prevention"
   }
 ]
+
 
 

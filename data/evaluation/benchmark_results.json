@@ -1,0 +1,1836 @@
+{
+  "num_queries": 40,
+  "top_k": 5,
+  "rrf_k": 60,
+  "summary": {
+    "sparse": {
+      "recall@1": 0.875,
+      "recall@3": 0.975,
+      "recall@5": 0.975,
+      "mrr": 0.925,
+      "precision@5": 0.195
+    },
+    "dense": {
+      "recall@1": 0.85,
+      "recall@3": 0.9,
+      "recall@5": 0.95,
+      "mrr": 0.8821,
+      "precision@5": 0.19
+    },
+    "hybrid": {
+      "recall@1": 0.875,
+      "recall@3": 0.975,
+      "recall@5": 1.0,
+      "mrr": 0.9271,
+      "precision@5": 0.2
+    }
+  },
+  "latency": {
+    "mean_ms": 9.18,
+    "median_ms": 8.99,
+    "p95_ms": 10.98,
+    "under_50ms_target": true
+  },
+  "per_query": [
+    {
+      "query_id": "Q01",
+      "category": "lexical_identifier",
+      "query": "What stride restriction applies when using padding='same' in torch.nn.Conv2d?",
+      "expected_doc_id": "torch_nn_conv2d::signature_and_parameters",
+      "latency_ms": 8.734,
+      "results": {
+        "sparse": {
+          "top_doc_ids": [
+            "torch_nn_conv2d::signature_and_parameters",
+            "torch_nn_conv2d::shape_and_depthwise_math",
+            "torch_amp_mixed_precision::autocast_fp16_bf16",
+            "torch_nn_recurrent_lstm::pack_padded_sequence_handling",
+            "torch_nn_recurrent_lstm::lstm_architecture_and_gates"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "dense": {
+          "top_doc_ids": [
+            "torch_nn_conv2d::signature_and_parameters",
+            "torch_nn_conv2d::shape_and_depthwise_math",
+            "torch_tensor_views_contiguity::view_vs_reshape_contiguous",
+            "torch_cuda_memory_management::cudnn_benchmark_and_determinism",
+            "torch_nn_recurrent_lstm::pack_padded_sequence_handling"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "hybrid": {
+          "top_doc_ids": [
+            "torch_nn_conv2d::signature_and_parameters",
+            "torch_nn_conv2d::shape_and_depthwise_math",
+            "torch_nn_recurrent_lstm::pack_padded_sequence_handling",
+            "torch_nn_multihead_attention::masks_and_fastpath",
+            "torch_nn_normalization::batchnorm2d_running_stats"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "Q02",
+      "category": "semantic_conceptual",
+      "query": "How do I apply independent spatial filters to each individual input plane without mixing information across channels?",
+      "expected_doc_id": "torch_nn_conv2d::shape_and_depthwise_math",
+      "latency_ms": 9.396,
+      "results": {
+        "sparse": {
+          "top_doc_ids": [
+            "torch_nn_conv2d::shape_and_depthwise_math",
+            "torch_nn_conv2d::signature_and_parameters",
+            "torch_nn_recurrent_lstm::lstm_architecture_and_gates",
+            "torch_cuda_memory_management::cudnn_benchmark_and_determinism",
+            "torch_serialization_checkpoints::weights_only_security_and_map_location"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "dense": {
+          "top_doc_ids": [
+            "torch_nn_conv2d::shape_and_depthwise_math",
+            "torch_nn_conv2d::signature_and_parameters",
+            "torch_nn_multihead_attention::scaled_dot_product_overview",
+            "torch_nn_multihead_attention::masks_and_fastpath",
+            "torch_utils_data_dataloader::custom_collate_fn_and_samplers"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "hybrid": {
+          "top_doc_ids": [
+            "torch_nn_conv2d::shape_and_depthwise_math",
+            "torch_nn_conv2d::signature_and_parameters",
+            "torch_nn_recurrent_lstm::lstm_architecture_and_gates",
+            "torch_nn_multihead_attention::scaled_dot_product_overview",
+            "torch_nn_losses::crossentropyloss_logits"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "Q03",
+      "category": "lexical_identifier",
+      "query": "H_out floor dilation[0] kernel_size[0] stride[0] padding[0]",
+      "expected_doc_id": "torch_nn_conv2d::shape_and_depthwise_math",
+      "latency_ms": 8.767,
+      "results": {
+        "sparse": {
+          "top_doc_ids": [
+            "torch_nn_conv2d::shape_and_depthwise_math",
+            "torch_nn_conv2d::signature_and_parameters",
+            "torch_nn_recurrent_lstm::lstm_architecture_and_gates",
+            "torch_nn_losses::crossentropyloss_logits",
+            "torch_nn_multihead_attention::masks_and_fastpath"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "dense": {
+          "top_doc_ids": [
+            "torch_nn_conv2d::shape_and_depthwise_math",
+            "torch_nn_conv2d::signature_and_parameters",
+            "torch_amp_mixed_precision::gradscaler_underflow_prevention",
+            "torch_nn_recurrent_lstm::lstm_architecture_and_gates",
+            "torch_optim_adamw::decoupled_weight_decay_math"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "hybrid": {
+          "top_doc_ids": [
+            "torch_nn_conv2d::shape_and_depthwise_math",
+            "torch_nn_conv2d::signature_and_parameters",
+            "torch_nn_recurrent_lstm::lstm_architecture_and_gates",
+            "torch_optim_adamw::decoupled_weight_decay_math",
+            "torch_nn_normalization::batchnorm2d_running_stats"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "Q04",
+      "category": "lexical_identifier",
+      "query": "add_bias_kv=False add_zero_attn=False",
+      "expected_doc_id": "torch_nn_multihead_attention::scaled_dot_product_overview",
+      "latency_ms": 8.619,
+      "results": {
+        "sparse": {
+          "top_doc_ids": [
+            "torch_nn_multihead_attention::scaled_dot_product_overview",
+            "torch_nn_multihead_attention::masks_and_fastpath",
+            "torch_amp_mixed_precision::gradscaler_underflow_prevention",
+            "torch_optim_adamw::parameter_groups_no_decay",
+            "torch_nn_normalization::layernorm_vs_batchnorm"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "dense": {
+          "top_doc_ids": [
+            "torch_optim_adamw::parameter_groups_no_decay",
+            "torch_optim_adamw::decoupled_weight_decay_math",
+            "torch_nn_losses::bcewithlogitsloss_pos_weight",
+            "torch_amp_mixed_precision::gradscaler_underflow_prevention",
+            "torch_optim_lr_schedulers::onecyclelr_super_convergence"
+          ],
+          "recall@1": 0.0,
+          "recall@5": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "hybrid": {
+          "top_doc_ids": [
+            "torch_optim_adamw::parameter_groups_no_decay",
+            "torch_amp_mixed_precision::gradscaler_underflow_prevention",
+            "torch_nn_multihead_attention::scaled_dot_product_overview",
+            "torch_nn_multihead_attention::masks_and_fastpath",
+            "torch_nn_conv2d::signature_and_parameters"
+          ],
+          "recall@1": 0.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 0.3333
+        }
+      }
+    },
+    {
+      "query_id": "Q05",
+      "category": "lexical_identifier",
+      "query": "key_padding_mask (N, S) vs attn_mask (L, S) boolean True",
+      "expected_doc_id": "torch_nn_multihead_attention::masks_and_fastpath",
+      "latency_ms": 10.145,
+      "results": {
+        "sparse": {
+          "top_doc_ids": [
+            "torch_nn_multihead_attention::masks_and_fastpath",
+            "torch_linalg_svd_einops::linalg_svd_and_einsum",
+            "torch_nn_conv2d::shape_and_depthwise_math",
+            "torch_nn_conv2d::signature_and_parameters",
+            "torch_nn_multihead_attention::scaled_dot_product_overview"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "dense": {
+          "top_doc_ids": [
+            "torch_nn_multihead_attention::masks_and_fastpath",
+            "torch_quantization_ao::dynamic_vs_static_ptq_qat",
+            "torch_nn_conv2d::shape_and_depthwise_math",
+            "torch_nn_conv2d::signature_and_parameters",
+            "torch_nn_recurrent_lstm::pack_padded_sequence_handling"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "hybrid": {
+          "top_doc_ids": [
+            "torch_nn_multihead_attention::masks_and_fastpath",
+            "torch_nn_conv2d::shape_and_depthwise_math",
+            "torch_nn_conv2d::signature_and_parameters",
+            "torch_nn_recurrent_lstm::pack_padded_sequence_handling",
+            "torch_nn_multihead_attention::scaled_dot_product_overview"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "Q06",
+      "category": "semantic_conceptual",
+      "query": "How do I enable hardware-accelerated memory-efficient attention by skipping explicit return of attention weights?",
+      "expected_doc_id": "torch_nn_multihead_attention::masks_and_fastpath",
+      "latency_ms": 8.628,
+      "results": {
+        "sparse": {
+          "top_doc_ids": [
+            "torch_nn_multihead_attention::masks_and_fastpath",
+            "torch_nn_multihead_attention::scaled_dot_product_overview",
+            "torch_tensor_views_contiguity::view_vs_reshape_contiguous",
+            "torch_serialization_checkpoints::weights_only_security_and_map_location",
+            "torch_nn_recurrent_lstm::lstm_architecture_and_gates"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "dense": {
+          "top_doc_ids": [
+            "torch_nn_multihead_attention::masks_and_fastpath",
+            "torch_nn_multihead_attention::scaled_dot_product_overview",
+            "torch_optim_adamw::decoupled_weight_decay_math",
+            "torch_utils_data_dataloader::multiprocess_workers_and_memory",
+            "torch_optim_lr_schedulers::onecyclelr_super_convergence"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "hybrid": {
+          "top_doc_ids": [
+            "torch_nn_multihead_attention::masks_and_fastpath",
+            "torch_nn_multihead_attention::scaled_dot_product_overview",
+            "torch_utils_data_dataloader::multiprocess_workers_and_memory",
+            "torch_nn_recurrent_lstm::lstm_architecture_and_gates",
+            "torch_serialization_checkpoints::weights_only_security_and_map_location"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "Q07",
+      "category": "lexical_identifier",
+      "query": "running_stat_new (1 - momentum) running_stat_old eps=1e-05",
+      "expected_doc_id": "torch_nn_normalization::batchnorm2d_running_stats",
+      "latency_ms": 8.516,
+      "results": {
+        "sparse": {
+          "top_doc_ids": [
+            "torch_nn_normalization::batchnorm2d_running_stats",
+            "torch_nn_normalization::layernorm_vs_batchnorm",
+            "torch_optim_adamw::decoupled_weight_decay_math",
+            "torch_autograd_mechanics::detach_and_backward_hooks",
+            "torch_nn_grad_clipping::clip_grad_norm_mechanics"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "dense": {
+          "top_doc_ids": [
+            "torch_nn_normalization::batchnorm2d_running_stats",
+            "torch_optim_lr_schedulers::onecyclelr_super_convergence",
+            "torch_optim_lr_schedulers::cosine_annealing_warm_restarts",
+            "torch_nn_losses::bcewithlogitsloss_pos_weight",
+            "torch_optim_adamw::decoupled_weight_decay_math"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "hybrid": {
+          "top_doc_ids": [
+            "torch_nn_normalization::batchnorm2d_running_stats",
+            "torch_optim_adamw::decoupled_weight_decay_math",
+            "torch_optim_lr_schedulers::cosine_annealing_warm_restarts",
+            "torch_nn_normalization::layernorm_vs_batchnorm",
+            "torch_nn_conv2d::signature_and_parameters"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "Q08",
+      "category": "semantic_conceptual",
+      "query": "Which normalization technique standardizes activations within each individual sequence example and works identically during training and inference?",
+      "expected_doc_id": "torch_nn_normalization::layernorm_vs_batchnorm",
+      "latency_ms": 8.908,
+      "results": {
+        "sparse": {
+          "top_doc_ids": [
+            "torch_autograd_mechanics::inference_mode_vs_no_grad",
+            "torch_nn_normalization::layernorm_vs_batchnorm",
+            "torch_autograd_mechanics::detach_and_backward_hooks",
+            "torch_quantization_ao::dynamic_vs_static_ptq_qat",
+            "torch_utils_data_dataloader::custom_collate_fn_and_samplers"
+          ],
+          "recall@1": 0.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 0.5
+        },
+        "dense": {
+          "top_doc_ids": [
+            "torch_nn_normalization::layernorm_vs_batchnorm",
+            "torch_quantization_ao::dynamic_vs_static_ptq_qat",
+            "torch_optim_adamw::decoupled_weight_decay_math",
+            "torch_nn_grad_clipping::clip_grad_norm_mechanics",
+            "torch_utils_data_dataloader::custom_collate_fn_and_samplers"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "hybrid": {
+          "top_doc_ids": [
+            "torch_nn_normalization::layernorm_vs_batchnorm",
+            "torch_quantization_ao::dynamic_vs_static_ptq_qat",
+            "torch_utils_data_dataloader::custom_collate_fn_and_samplers",
+            "torch_autograd_mechanics::inference_mode_vs_no_grad",
+            "torch_nn_recurrent_lstm::pack_padded_sequence_handling"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "Q09",
+      "category": "hybrid_technical",
+      "query": "Why does setting dropout > 0 with num_layers=1 in torch.nn.LSTM trigger a UserWarning?",
+      "expected_doc_id": "torch_nn_recurrent_lstm::lstm_architecture_and_gates",
+      "latency_ms": 9.49,
+      "results": {
+        "sparse": {
+          "top_doc_ids": [
+            "torch_nn_recurrent_lstm::lstm_architecture_and_gates",
+            "torch_nn_recurrent_lstm::pack_padded_sequence_handling",
+            "torch_nn_multihead_attention::scaled_dot_product_overview",
+            "torch_utils_data_dataloader::multiprocess_workers_and_memory",
+            "torch_nn_normalization::batchnorm2d_running_stats"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "dense": {
+          "top_doc_ids": [
+            "torch_nn_recurrent_lstm::lstm_architecture_and_gates",
+            "torch_nn_recurrent_lstm::pack_padded_sequence_handling",
+            "torch_optim_adamw::parameter_groups_no_decay",
+            "torch_nn_normalization::batchnorm2d_running_stats",
+            "torch_nn_grad_clipping::clip_grad_norm_mechanics"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "hybrid": {
+          "top_doc_ids": [
+            "torch_nn_recurrent_lstm::lstm_architecture_and_gates",
+            "torch_nn_recurrent_lstm::pack_padded_sequence_handling",
+            "torch_nn_normalization::batchnorm2d_running_stats",
+            "torch_utils_data_dataloader::multiprocess_workers_and_memory",
+            "torch_optim_adamw::decoupled_weight_decay_math"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "Q10",
+      "category": "lexical_identifier",
+      "query": "pack_padded_sequence pad_packed_sequence enforce_sorted=False",
+      "expected_doc_id": "torch_nn_recurrent_lstm::pack_padded_sequence_handling",
+      "latency_ms": 8.716,
+      "results": {
+        "sparse": {
+          "top_doc_ids": [
+            "torch_nn_recurrent_lstm::pack_padded_sequence_handling",
+            "torch_utils_data_dataloader::custom_collate_fn_and_samplers",
+            "torch_nn_multihead_attention::masks_and_fastpath",
+            "torch_utils_data_dataloader::multiprocess_workers_and_memory",
+            "torch_distributed_ddp::ddp_vs_dataparallel"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "dense": {
+          "top_doc_ids": [
+            "torch_nn_recurrent_lstm::pack_padded_sequence_handling",
+            "torch_utils_data_dataloader::custom_collate_fn_and_samplers",
+            "torch_tensor_views_contiguity::view_vs_reshape_contiguous",
+            "torch_nn_multihead_attention::masks_and_fastpath",
+            "torch_cuda_memory_management::caching_allocator_and_empty_cache"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "hybrid": {
+          "top_doc_ids": [
+            "torch_nn_recurrent_lstm::pack_padded_sequence_handling",
+            "torch_utils_data_dataloader::custom_collate_fn_and_samplers",
+            "torch_nn_multihead_attention::masks_and_fastpath",
+            "torch_serialization_checkpoints::state_dict_ddp_prefix",
+            "torch_tensor_views_contiguity::view_vs_reshape_contiguous"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "Q11",
+      "category": "lexical_identifier",
+      "query": "ignore_index=-100 label_smoothing=0.0 LogSoftmax NLLLoss",
+      "expected_doc_id": "torch_nn_losses::crossentropyloss_logits",
+      "latency_ms": 9.462,
+      "results": {
+        "sparse": {
+          "top_doc_ids": [
+            "torch_nn_losses::crossentropyloss_logits",
+            "torch_nn_losses::bcewithlogitsloss_pos_weight",
+            "torch_amp_mixed_precision::autocast_fp16_bf16",
+            "torch_amp_mixed_precision::gradscaler_underflow_prevention",
+            "torch_nn_multihead_attention::scaled_dot_product_overview"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "dense": {
+          "top_doc_ids": [
+            "torch_nn_losses::crossentropyloss_logits",
+            "torch_nn_losses::bcewithlogitsloss_pos_weight",
+            "torch_optim_lr_schedulers::cosine_annealing_warm_restarts",
+            "torch_amp_mixed_precision::gradscaler_underflow_prevention",
+            "torch_optim_adamw::parameter_groups_no_decay"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "hybrid": {
+          "top_doc_ids": [
+            "torch_nn_losses::crossentropyloss_logits",
+            "torch_nn_losses::bcewithlogitsloss_pos_weight",
+            "torch_amp_mixed_precision::gradscaler_underflow_prevention",
+            "torch_optim_adamw::parameter_groups_no_decay",
+            "torch_nn_grad_clipping::clip_grad_norm_mechanics"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "Q12",
+      "category": "semantic_conceptual",
+      "query": "How can I trade off precision and recall on rare positive targets in binary classification with skewed class frequencies?",
+      "expected_doc_id": "torch_nn_losses::bcewithlogitsloss_pos_weight",
+      "latency_ms": 9.744,
+      "results": {
+        "sparse": {
+          "top_doc_ids": [
+            "torch_nn_losses::bcewithlogitsloss_pos_weight",
+            "torch_amp_mixed_precision::autocast_fp16_bf16",
+            "torch_nn_recurrent_lstm::lstm_architecture_and_gates",
+            "torch_optim_lr_schedulers::cosine_annealing_warm_restarts",
+            "torch_nn_normalization::layernorm_vs_batchnorm"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "dense": {
+          "top_doc_ids": [
+            "torch_nn_losses::bcewithlogitsloss_pos_weight",
+            "torch_amp_mixed_precision::gradscaler_underflow_prevention",
+            "torch_amp_mixed_precision::autocast_fp16_bf16",
+            "torch_utils_data_dataloader::custom_collate_fn_and_samplers",
+            "torch_nn_losses::crossentropyloss_logits"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "hybrid": {
+          "top_doc_ids": [
+            "torch_nn_losses::bcewithlogitsloss_pos_weight",
+            "torch_amp_mixed_precision::autocast_fp16_bf16",
+            "torch_amp_mixed_precision::gradscaler_underflow_prevention",
+            "torch_nn_losses::crossentropyloss_logits",
+            "torch_optim_lr_schedulers::cosine_annealing_warm_restarts"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "Q13",
+      "category": "hybrid_technical",
+      "query": "How does AdamW decoupled weight decay differ mathematically from standard Adam L2 regularization?",
+      "expected_doc_id": "torch_optim_adamw::decoupled_weight_decay_math",
+      "latency_ms": 8.938,
+      "results": {
+        "sparse": {
+          "top_doc_ids": [
+            "torch_optim_adamw::decoupled_weight_decay_math",
+            "torch_optim_adamw::parameter_groups_no_decay",
+            "torch_nn_losses::bcewithlogitsloss_pos_weight",
+            "torch_nn_losses::crossentropyloss_logits",
+            "torch_nn_conv2d::shape_and_depthwise_math"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "dense": {
+          "top_doc_ids": [
+            "torch_optim_adamw::decoupled_weight_decay_math",
+            "torch_optim_adamw::parameter_groups_no_decay",
+            "torch_nn_grad_clipping::clip_grad_norm_mechanics",
+            "torch_nn_losses::crossentropyloss_logits",
+            "torch_amp_mixed_precision::gradscaler_underflow_prevention"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "hybrid": {
+          "top_doc_ids": [
+            "torch_optim_adamw::decoupled_weight_decay_math",
+            "torch_optim_adamw::parameter_groups_no_decay",
+            "torch_nn_losses::crossentropyloss_logits",
+            "torch_nn_losses::bcewithlogitsloss_pos_weight",
+            "torch_nn_conv2d::shape_and_depthwise_math"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "Q14",
+      "category": "semantic_conceptual",
+      "query": "Configuring optimizer parameter dictionaries so 1D biases and normalization weights have zero weight_decay",
+      "expected_doc_id": "torch_optim_adamw::parameter_groups_no_decay",
+      "latency_ms": 7.966,
+      "results": {
+        "sparse": {
+          "top_doc_ids": [
+            "torch_optim_adamw::parameter_groups_no_decay",
+            "torch_optim_adamw::decoupled_weight_decay_math",
+            "torch_amp_mixed_precision::gradscaler_underflow_prevention",
+            "torch_nn_losses::crossentropyloss_logits",
+            "torch_nn_multihead_attention::scaled_dot_product_overview"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "dense": {
+          "top_doc_ids": [
+            "torch_optim_adamw::parameter_groups_no_decay",
+            "torch_optim_adamw::decoupled_weight_decay_math",
+            "torch_amp_mixed_precision::gradscaler_underflow_prevention",
+            "torch_nn_grad_clipping::clip_grad_norm_mechanics",
+            "torch_nn_normalization::batchnorm2d_running_stats"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "hybrid": {
+          "top_doc_ids": [
+            "torch_optim_adamw::parameter_groups_no_decay",
+            "torch_optim_adamw::decoupled_weight_decay_math",
+            "torch_amp_mixed_precision::gradscaler_underflow_prevention",
+            "torch_nn_multihead_attention::scaled_dot_product_overview",
+            "torch_nn_grad_clipping::clip_grad_norm_mechanics"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "Q15",
+      "category": "lexical_identifier",
+      "query": "div_factor=25.0 final_div_factor=10000.0",
+      "expected_doc_id": "torch_optim_lr_schedulers::onecyclelr_super_convergence",
+      "latency_ms": 8.897,
+      "results": {
+        "sparse": {
+          "top_doc_ids": [
+            "torch_optim_lr_schedulers::onecyclelr_super_convergence",
+            "torch_amp_mixed_precision::gradscaler_underflow_prevention",
+            "torch_utils_data_dataloader::multiprocess_workers_and_memory",
+            "torch_distributed_ddp::ddp_no_sync_gradient_accumulation",
+            "torch_distributed_ddp::ddp_vs_dataparallel"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "dense": {
+          "top_doc_ids": [
+            "torch_amp_mixed_precision::gradscaler_underflow_prevention",
+            "torch_nn_multihead_attention::scaled_dot_product_overview",
+            "torch_linalg_svd_einops::linalg_svd_and_einsum",
+            "torch_amp_mixed_precision::autocast_fp16_bf16",
+            "torch_nn_conv2d::shape_and_depthwise_math"
+          ],
+          "recall@1": 0.0,
+          "recall@5": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "hybrid": {
+          "top_doc_ids": [
+            "torch_amp_mixed_precision::gradscaler_underflow_prevention",
+            "torch_optim_lr_schedulers::onecyclelr_super_convergence",
+            "torch_nn_conv2d::shape_and_depthwise_math",
+            "torch_optim_adamw::parameter_groups_no_decay",
+            "torch_optim_adamw::decoupled_weight_decay_math"
+          ],
+          "recall@1": 0.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 0.5
+        }
+      }
+    },
+    {
+      "query_id": "Q16",
+      "category": "lexical_identifier",
+      "query": "T_0 T_mult=1 eta_min=0 SGDR",
+      "expected_doc_id": "torch_optim_lr_schedulers::cosine_annealing_warm_restarts",
+      "latency_ms": 7.818,
+      "results": {
+        "sparse": {
+          "top_doc_ids": [
+            "torch_optim_lr_schedulers::cosine_annealing_warm_restarts",
+            "torch_nn_recurrent_lstm::lstm_architecture_and_gates",
+            "torch_optim_adamw::decoupled_weight_decay_math",
+            "torch_nn_multihead_attention::scaled_dot_product_overview",
+            "torch_linalg_svd_einops::linalg_svd_and_einsum"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "dense": {
+          "top_doc_ids": [
+            "torch_optim_adamw::decoupled_weight_decay_math",
+            "torch_optim_lr_schedulers::cosine_annealing_warm_restarts",
+            "torch_optim_adamw::parameter_groups_no_decay",
+            "torch_nn_multihead_attention::scaled_dot_product_overview",
+            "torch_linalg_svd_einops::linalg_svd_and_einsum"
+          ],
+          "recall@1": 0.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 0.5
+        },
+        "hybrid": {
+          "top_doc_ids": [
+            "torch_optim_lr_schedulers::cosine_annealing_warm_restarts",
+            "torch_optim_adamw::decoupled_weight_decay_math",
+            "torch_nn_multihead_attention::scaled_dot_product_overview",
+            "torch_linalg_svd_einops::linalg_svd_and_einsum",
+            "torch_optim_adamw::parameter_groups_no_decay"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "Q17",
+      "category": "semantic_conceptual",
+      "query": "How can I avoid the overhead of tearing down and respawning background data-fetching processes between training epochs?",
+      "expected_doc_id": "torch_utils_data_dataloader::multiprocess_workers_and_memory",
+      "latency_ms": 9.841,
+      "results": {
+        "sparse": {
+          "top_doc_ids": [
+            "torch_utils_data_dataloader::multiprocess_workers_and_memory",
+            "torch_utils_data_dataloader::custom_collate_fn_and_samplers",
+            "torch_nn_recurrent_lstm::lstm_architecture_and_gates",
+            "torch_compile_dynamo::graph_breaks_and_fullgraph",
+            "torch_compile_dynamo::torch_compile_modes_and_backends"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "dense": {
+          "top_doc_ids": [
+            "torch_utils_data_dataloader::multiprocess_workers_and_memory",
+            "torch_distributed_ddp::ddp_vs_dataparallel",
+            "torch_distributed_ddp::ddp_no_sync_gradient_accumulation",
+            "torch_optim_lr_schedulers::onecyclelr_super_convergence",
+            "torch_utils_data_dataloader::custom_collate_fn_and_samplers"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "hybrid": {
+          "top_doc_ids": [
+            "torch_utils_data_dataloader::multiprocess_workers_and_memory",
+            "torch_utils_data_dataloader::custom_collate_fn_and_samplers",
+            "torch_optim_lr_schedulers::onecyclelr_super_convergence",
+            "torch_distributed_ddp::ddp_vs_dataparallel",
+            "torch_distributed_ddp::ddp_no_sync_gradient_accumulation"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "Q18",
+      "category": "lexical_identifier",
+      "query": "What does pin_memory=True do in DataLoader when transferring tensors with non_blocking=True?",
+      "expected_doc_id": "torch_utils_data_dataloader::multiprocess_workers_and_memory",
+      "latency_ms": 9.307,
+      "results": {
+        "sparse": {
+          "top_doc_ids": [
+            "torch_utils_data_dataloader::multiprocess_workers_and_memory",
+            "torch_utils_data_dataloader::custom_collate_fn_and_samplers",
+            "torch_tensor_views_contiguity::view_vs_reshape_contiguous",
+            "torch_cuda_memory_management::caching_allocator_and_empty_cache",
+            "torch_serialization_checkpoints::weights_only_security_and_map_location"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "dense": {
+          "top_doc_ids": [
+            "torch_utils_data_dataloader::multiprocess_workers_and_memory",
+            "torch_cuda_memory_management::caching_allocator_and_empty_cache",
+            "torch_tensor_views_contiguity::register_buffer_vs_parameter",
+            "torch_serialization_checkpoints::weights_only_security_and_map_location",
+            "torch_autograd_mechanics::detach_and_backward_hooks"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "hybrid": {
+          "top_doc_ids": [
+            "torch_utils_data_dataloader::multiprocess_workers_and_memory",
+            "torch_cuda_memory_management::caching_allocator_and_empty_cache",
+            "torch_tensor_views_contiguity::register_buffer_vs_parameter",
+            "torch_serialization_checkpoints::weights_only_security_and_map_location",
+            "torch_tensor_views_contiguity::view_vs_reshape_contiguous"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "Q19",
+      "category": "hybrid_technical",
+      "query": "Why must sampler.set_epoch(epoch) be called when using DistributedSampler with DataLoader?",
+      "expected_doc_id": "torch_utils_data_dataloader::custom_collate_fn_and_samplers",
+      "latency_ms": 9.725,
+      "results": {
+        "sparse": {
+          "top_doc_ids": [
+            "torch_utils_data_dataloader::custom_collate_fn_and_samplers",
+            "torch_utils_data_dataloader::multiprocess_workers_and_memory",
+            "torch_optim_lr_schedulers::onecyclelr_super_convergence",
+            "torch_distributed_ddp::ddp_vs_dataparallel",
+            "torch_distributed_ddp::ddp_no_sync_gradient_accumulation"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "dense": {
+          "top_doc_ids": [
+            "torch_utils_data_dataloader::custom_collate_fn_and_samplers",
+            "torch_distributed_ddp::ddp_no_sync_gradient_accumulation",
+            "torch_distributed_ddp::ddp_vs_dataparallel",
+            "torch_serialization_checkpoints::state_dict_ddp_prefix",
+            "torch_utils_data_dataloader::multiprocess_workers_and_memory"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "hybrid": {
+          "top_doc_ids": [
+            "torch_utils_data_dataloader::custom_collate_fn_and_samplers",
+            "torch_distributed_ddp::ddp_no_sync_gradient_accumulation",
+            "torch_utils_data_dataloader::multiprocess_workers_and_memory",
+            "torch_distributed_ddp::ddp_vs_dataparallel",
+            "torch_optim_lr_schedulers::onecyclelr_super_convergence"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "Q20",
+      "category": "hybrid_technical",
+      "query": "Why is torch.inference_mode() faster than torch.no_grad() regarding view tracking and version counter bumps?",
+      "expected_doc_id": "torch_autograd_mechanics::inference_mode_vs_no_grad",
+      "latency_ms": 10.297,
+      "results": {
+        "sparse": {
+          "top_doc_ids": [
+            "torch_autograd_mechanics::inference_mode_vs_no_grad",
+            "torch_autograd_mechanics::detach_and_backward_hooks",
+            "torch_compile_dynamo::torch_compile_modes_and_backends",
+            "torch_tensor_views_contiguity::view_vs_reshape_contiguous",
+            "torch_nn_grad_clipping::clip_grad_norm_mechanics"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "dense": {
+          "top_doc_ids": [
+            "torch_autograd_mechanics::inference_mode_vs_no_grad",
+            "torch_optim_adamw::decoupled_weight_decay_math",
+            "torch_autograd_mechanics::detach_and_backward_hooks",
+            "torch_cuda_memory_management::cudnn_benchmark_and_determinism",
+            "torch_nn_normalization::batchnorm2d_running_stats"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "hybrid": {
+          "top_doc_ids": [
+            "torch_autograd_mechanics::inference_mode_vs_no_grad",
+            "torch_autograd_mechanics::detach_and_backward_hooks",
+            "torch_compile_dynamo::torch_compile_modes_and_backends",
+            "torch_amp_mixed_precision::gradscaler_underflow_prevention",
+            "torch_tensor_views_contiguity::view_vs_reshape_contiguous"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "Q21",
+      "category": "lexical_identifier",
+      "query": "How to inspect module gradients using register_full_backward_hook and recompute activations via checkpoint(use_reentrant=False)?",
+      "expected_doc_id": "torch_autograd_mechanics::detach_and_backward_hooks",
+      "latency_ms": 10.627,
+      "results": {
+        "sparse": {
+          "top_doc_ids": [
+            "torch_autograd_mechanics::detach_and_backward_hooks",
+            "torch_serialization_checkpoints::weights_only_security_and_map_location",
+            "torch_tensor_views_contiguity::register_buffer_vs_parameter",
+            "torch_nn_grad_clipping::clip_grad_norm_mechanics",
+            "torch_amp_mixed_precision::gradscaler_underflow_prevention"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "dense": {
+          "top_doc_ids": [
+            "torch_autograd_mechanics::detach_and_backward_hooks",
+            "torch_nn_grad_clipping::clip_grad_norm_mechanics",
+            "torch_autograd_mechanics::inference_mode_vs_no_grad",
+            "torch_serialization_checkpoints::weights_only_security_and_map_location",
+            "torch_distributed_ddp::ddp_no_sync_gradient_accumulation"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "hybrid": {
+          "top_doc_ids": [
+            "torch_autograd_mechanics::detach_and_backward_hooks",
+            "torch_nn_grad_clipping::clip_grad_norm_mechanics",
+            "torch_serialization_checkpoints::weights_only_security_and_map_location",
+            "torch_tensor_views_contiguity::register_buffer_vs_parameter",
+            "torch_amp_mixed_precision::gradscaler_underflow_prevention"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "Q22",
+      "category": "semantic_conceptual",
+      "query": "How to prevent unstable derivative explosions in deep sequence models by capping vector magnitude?",
+      "expected_doc_id": "torch_nn_grad_clipping::clip_grad_norm_mechanics",
+      "latency_ms": 9.072,
+      "results": {
+        "sparse": {
+          "top_doc_ids": [
+            "torch_nn_recurrent_lstm::pack_padded_sequence_handling",
+            "torch_utils_data_dataloader::custom_collate_fn_and_samplers",
+            "torch_nn_multihead_attention::masks_and_fastpath",
+            "torch_amp_mixed_precision::autocast_fp16_bf16",
+            "torch_amp_mixed_precision::gradscaler_underflow_prevention"
+          ],
+          "recall@1": 0.0,
+          "recall@5": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "dense": {
+          "top_doc_ids": [
+            "torch_nn_grad_clipping::clip_grad_norm_mechanics",
+            "torch_nn_recurrent_lstm::pack_padded_sequence_handling",
+            "torch_optim_adamw::decoupled_weight_decay_math",
+            "torch_amp_mixed_precision::gradscaler_underflow_prevention",
+            "torch_nn_normalization::batchnorm2d_running_stats"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "hybrid": {
+          "top_doc_ids": [
+            "torch_nn_recurrent_lstm::pack_padded_sequence_handling",
+            "torch_nn_multihead_attention::masks_and_fastpath",
+            "torch_utils_data_dataloader::custom_collate_fn_and_samplers",
+            "torch_nn_grad_clipping::clip_grad_norm_mechanics",
+            "torch_optim_adamw::decoupled_weight_decay_math"
+          ],
+          "recall@1": 0.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 0.25
+        }
+      }
+    },
+    {
+      "query_id": "Q23",
+      "category": "semantic_conceptual",
+      "query": "Speeding up neural network matrix multiplications on Tensor Cores using half-precision floating point",
+      "expected_doc_id": "torch_amp_mixed_precision::autocast_fp16_bf16",
+      "latency_ms": 8.824,
+      "results": {
+        "sparse": {
+          "top_doc_ids": [
+            "torch_nn_recurrent_lstm::lstm_architecture_and_gates",
+            "torch_amp_mixed_precision::autocast_fp16_bf16",
+            "torch_compile_dynamo::torch_compile_modes_and_backends",
+            "torch_nn_recurrent_lstm::pack_padded_sequence_handling",
+            "torch_optim_lr_schedulers::onecyclelr_super_convergence"
+          ],
+          "recall@1": 0.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 0.5
+        },
+        "dense": {
+          "top_doc_ids": [
+            "torch_cuda_memory_management::cudnn_benchmark_and_determinism",
+            "torch_nn_multihead_attention::scaled_dot_product_overview",
+            "torch_optim_adamw::decoupled_weight_decay_math",
+            "torch_amp_mixed_precision::autocast_fp16_bf16",
+            "torch_compile_dynamo::torch_compile_modes_and_backends"
+          ],
+          "recall@1": 0.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 0.25
+        },
+        "hybrid": {
+          "top_doc_ids": [
+            "torch_amp_mixed_precision::autocast_fp16_bf16",
+            "torch_compile_dynamo::torch_compile_modes_and_backends",
+            "torch_cuda_memory_management::cudnn_benchmark_and_determinism",
+            "torch_optim_lr_schedulers::onecyclelr_super_convergence",
+            "torch_optim_adamw::decoupled_weight_decay_math"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "Q24",
+      "category": "lexical_identifier",
+      "query": "Why must scaler.unscale_(optimizer) be called before clip_grad_norm_ when using torch.amp.GradScaler?",
+      "expected_doc_id": "torch_amp_mixed_precision::gradscaler_underflow_prevention",
+      "latency_ms": 11.508,
+      "results": {
+        "sparse": {
+          "top_doc_ids": [
+            "torch_amp_mixed_precision::gradscaler_underflow_prevention",
+            "torch_nn_grad_clipping::clip_grad_norm_mechanics",
+            "torch_amp_mixed_precision::autocast_fp16_bf16",
+            "torch_autograd_mechanics::inference_mode_vs_no_grad",
+            "torch_optim_adamw::parameter_groups_no_decay"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "dense": {
+          "top_doc_ids": [
+            "torch_amp_mixed_precision::gradscaler_underflow_prevention",
+            "torch_nn_grad_clipping::clip_grad_norm_mechanics",
+            "torch_optim_adamw::decoupled_weight_decay_math",
+            "torch_optim_adamw::parameter_groups_no_decay",
+            "torch_autograd_mechanics::inference_mode_vs_no_grad"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "hybrid": {
+          "top_doc_ids": [
+            "torch_amp_mixed_precision::gradscaler_underflow_prevention",
+            "torch_nn_grad_clipping::clip_grad_norm_mechanics",
+            "torch_amp_mixed_precision::autocast_fp16_bf16",
+            "torch_optim_adamw::parameter_groups_no_decay",
+            "torch_autograd_mechanics::inference_mode_vs_no_grad"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "Q25",
+      "category": "hybrid_technical",
+      "query": "Why is DistributedDataParallel preferred over DataParallel for avoiding GIL contention and how does bucket_cap_mb=25 work?",
+      "expected_doc_id": "torch_distributed_ddp::ddp_vs_dataparallel",
+      "latency_ms": 10.972,
+      "results": {
+        "sparse": {
+          "top_doc_ids": [
+            "torch_distributed_ddp::ddp_vs_dataparallel",
+            "torch_distributed_ddp::ddp_no_sync_gradient_accumulation",
+            "torch_serialization_checkpoints::state_dict_ddp_prefix",
+            "torch_utils_data_dataloader::custom_collate_fn_and_samplers",
+            "torch_utils_data_dataloader::multiprocess_workers_and_memory"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "dense": {
+          "top_doc_ids": [
+            "torch_distributed_ddp::ddp_vs_dataparallel",
+            "torch_distributed_ddp::ddp_no_sync_gradient_accumulation",
+            "torch_serialization_checkpoints::state_dict_ddp_prefix",
+            "torch_utils_data_dataloader::custom_collate_fn_and_samplers",
+            "torch_serialization_checkpoints::weights_only_security_and_map_location"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "hybrid": {
+          "top_doc_ids": [
+            "torch_distributed_ddp::ddp_vs_dataparallel",
+            "torch_distributed_ddp::ddp_no_sync_gradient_accumulation",
+            "torch_serialization_checkpoints::state_dict_ddp_prefix",
+            "torch_utils_data_dataloader::custom_collate_fn_and_samplers",
+            "torch_utils_data_dataloader::multiprocess_workers_and_memory"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "Q26",
+      "category": "lexical_identifier",
+      "query": "TORCH_NCCL_ASYNC_ERROR_HANDLING=1 bucket_cap_mb=25",
+      "expected_doc_id": "torch_distributed_ddp::ddp_vs_dataparallel",
+      "latency_ms": 8.754,
+      "results": {
+        "sparse": {
+          "top_doc_ids": [
+            "torch_distributed_ddp::ddp_vs_dataparallel",
+            "torch_serialization_checkpoints::state_dict_ddp_prefix",
+            "torch_nn_recurrent_lstm::pack_padded_sequence_handling",
+            "torch_optim_lr_schedulers::onecyclelr_super_convergence",
+            "torch_compile_dynamo::graph_breaks_and_fullgraph"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "dense": {
+          "top_doc_ids": [
+            "torch_distributed_ddp::ddp_vs_dataparallel",
+            "torch_nn_normalization::batchnorm2d_running_stats",
+            "torch_utils_data_dataloader::multiprocess_workers_and_memory",
+            "torch_cuda_memory_management::cudnn_benchmark_and_determinism",
+            "torch_serialization_checkpoints::state_dict_ddp_prefix"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "hybrid": {
+          "top_doc_ids": [
+            "torch_distributed_ddp::ddp_vs_dataparallel",
+            "torch_serialization_checkpoints::state_dict_ddp_prefix",
+            "torch_nn_normalization::batchnorm2d_running_stats",
+            "torch_optim_lr_schedulers::onecyclelr_super_convergence",
+            "torch_compile_dynamo::graph_breaks_and_fullgraph"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "Q27",
+      "category": "semantic_conceptual",
+      "query": "How do you postpone cross-worker gradient synchronization when accumulating derivatives over multiple mini-batches?",
+      "expected_doc_id": "torch_distributed_ddp::ddp_no_sync_gradient_accumulation",
+      "latency_ms": 9.048,
+      "results": {
+        "sparse": {
+          "top_doc_ids": [
+            "torch_distributed_ddp::ddp_no_sync_gradient_accumulation",
+            "torch_nn_losses::crossentropyloss_logits",
+            "torch_utils_data_dataloader::custom_collate_fn_and_samplers",
+            "torch_amp_mixed_precision::gradscaler_underflow_prevention",
+            "torch_nn_losses::bcewithlogitsloss_pos_weight"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "dense": {
+          "top_doc_ids": [
+            "torch_distributed_ddp::ddp_no_sync_gradient_accumulation",
+            "torch_distributed_ddp::ddp_vs_dataparallel",
+            "torch_autograd_mechanics::detach_and_backward_hooks",
+            "torch_nn_grad_clipping::clip_grad_norm_mechanics",
+            "torch_optim_lr_schedulers::onecyclelr_super_convergence"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "hybrid": {
+          "top_doc_ids": [
+            "torch_distributed_ddp::ddp_no_sync_gradient_accumulation",
+            "torch_distributed_ddp::ddp_vs_dataparallel",
+            "torch_nn_losses::crossentropyloss_logits",
+            "torch_utils_data_dataloader::custom_collate_fn_and_samplers",
+            "torch_nn_grad_clipping::clip_grad_norm_mechanics"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "Q28",
+      "category": "lexical_identifier",
+      "query": "mode='reduce-overhead' mode='max-autotune' AOTAutograd",
+      "expected_doc_id": "torch_compile_dynamo::torch_compile_modes_and_backends",
+      "latency_ms": 8.508,
+      "results": {
+        "sparse": {
+          "top_doc_ids": [
+            "torch_compile_dynamo::torch_compile_modes_and_backends",
+            "torch_autograd_mechanics::inference_mode_vs_no_grad",
+            "torch_autograd_mechanics::detach_and_backward_hooks",
+            "torch_nn_conv2d::signature_and_parameters",
+            "torch_nn_grad_clipping::clip_grad_norm_mechanics"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "dense": {
+          "top_doc_ids": [
+            "torch_optim_lr_schedulers::onecyclelr_super_convergence",
+            "torch_autograd_mechanics::inference_mode_vs_no_grad",
+            "torch_quantization_ao::dynamic_vs_static_ptq_qat",
+            "torch_optim_lr_schedulers::cosine_annealing_warm_restarts",
+            "torch_compile_dynamo::torch_compile_modes_and_backends"
+          ],
+          "recall@1": 0.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 0.2
+        },
+        "hybrid": {
+          "top_doc_ids": [
+            "torch_autograd_mechanics::inference_mode_vs_no_grad",
+            "torch_compile_dynamo::torch_compile_modes_and_backends",
+            "torch_optim_lr_schedulers::onecyclelr_super_convergence",
+            "torch_autograd_mechanics::detach_and_backward_hooks",
+            "torch_nn_grad_clipping::clip_grad_norm_mechanics"
+          ],
+          "recall@1": 0.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 0.5
+        }
+      }
+    },
+    {
+      "query_id": "Q29",
+      "category": "lexical_identifier",
+      "query": "torch._dynamo.explain fullgraph=True .item()",
+      "expected_doc_id": "torch_compile_dynamo::graph_breaks_and_fullgraph",
+      "latency_ms": 9.228,
+      "results": {
+        "sparse": {
+          "top_doc_ids": [
+            "torch_compile_dynamo::graph_breaks_and_fullgraph",
+            "torch_compile_dynamo::torch_compile_modes_and_backends",
+            "torch_cuda_memory_management::cudnn_benchmark_and_determinism",
+            "torch_serialization_checkpoints::weights_only_security_and_map_location",
+            "torch_nn_normalization::layernorm_vs_batchnorm"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "dense": {
+          "top_doc_ids": [
+            "torch_compile_dynamo::graph_breaks_and_fullgraph",
+            "torch_tensor_views_contiguity::view_vs_reshape_contiguous",
+            "torch_optim_lr_schedulers::onecyclelr_super_convergence",
+            "torch_optim_adamw::decoupled_weight_decay_math",
+            "torch_distributed_ddp::ddp_vs_dataparallel"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "hybrid": {
+          "top_doc_ids": [
+            "torch_compile_dynamo::graph_breaks_and_fullgraph",
+            "torch_compile_dynamo::torch_compile_modes_and_backends",
+            "torch_cuda_memory_management::cudnn_benchmark_and_determinism",
+            "torch_optim_adamw::decoupled_weight_decay_math",
+            "torch_distributed_ddp::ddp_vs_dataparallel"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "Q30",
+      "category": "lexical_identifier",
+      "query": "weights_only=True map_location mmap=True",
+      "expected_doc_id": "torch_serialization_checkpoints::weights_only_security_and_map_location",
+      "latency_ms": 8.067,
+      "results": {
+        "sparse": {
+          "top_doc_ids": [
+            "torch_serialization_checkpoints::weights_only_security_and_map_location",
+            "torch_amp_mixed_precision::autocast_fp16_bf16",
+            "torch_nn_multihead_attention::masks_and_fastpath",
+            "torch_optim_adamw::parameter_groups_no_decay",
+            "torch_optim_adamw::decoupled_weight_decay_math"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "dense": {
+          "top_doc_ids": [
+            "torch_serialization_checkpoints::weights_only_security_and_map_location",
+            "torch_optim_adamw::parameter_groups_no_decay",
+            "torch_optim_adamw::decoupled_weight_decay_math",
+            "torch_nn_multihead_attention::masks_and_fastpath",
+            "torch_nn_losses::bcewithlogitsloss_pos_weight"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "hybrid": {
+          "top_doc_ids": [
+            "torch_serialization_checkpoints::weights_only_security_and_map_location",
+            "torch_optim_adamw::parameter_groups_no_decay",
+            "torch_nn_multihead_attention::masks_and_fastpath",
+            "torch_optim_adamw::decoupled_weight_decay_math",
+            "torch_amp_mixed_precision::autocast_fp16_bf16"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "Q31",
+      "category": "hybrid_technical",
+      "query": "Why do DistributedDataParallel checkpoints have a 'module.' prefix in state_dict and what does strict=False return?",
+      "expected_doc_id": "torch_serialization_checkpoints::state_dict_ddp_prefix",
+      "latency_ms": 9.679,
+      "results": {
+        "sparse": {
+          "top_doc_ids": [
+            "torch_serialization_checkpoints::state_dict_ddp_prefix",
+            "torch_distributed_ddp::ddp_vs_dataparallel",
+            "torch_distributed_ddp::ddp_no_sync_gradient_accumulation",
+            "torch_serialization_checkpoints::weights_only_security_and_map_location",
+            "torch_tensor_views_contiguity::register_buffer_vs_parameter"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "dense": {
+          "top_doc_ids": [
+            "torch_serialization_checkpoints::state_dict_ddp_prefix",
+            "torch_distributed_ddp::ddp_no_sync_gradient_accumulation",
+            "torch_serialization_checkpoints::weights_only_security_and_map_location",
+            "torch_tensor_views_contiguity::register_buffer_vs_parameter",
+            "torch_distributed_ddp::ddp_vs_dataparallel"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "hybrid": {
+          "top_doc_ids": [
+            "torch_serialization_checkpoints::state_dict_ddp_prefix",
+            "torch_distributed_ddp::ddp_no_sync_gradient_accumulation",
+            "torch_distributed_ddp::ddp_vs_dataparallel",
+            "torch_serialization_checkpoints::weights_only_security_and_map_location",
+            "torch_tensor_views_contiguity::register_buffer_vs_parameter"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "Q32",
+      "category": "lexical_identifier",
+      "query": "PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True",
+      "expected_doc_id": "torch_cuda_memory_management::caching_allocator_and_empty_cache",
+      "latency_ms": 8.097,
+      "results": {
+        "sparse": {
+          "top_doc_ids": [
+            "torch_cuda_memory_management::caching_allocator_and_empty_cache",
+            "torch_cuda_memory_management::cudnn_benchmark_and_determinism",
+            "torch_quantization_ao::dynamic_vs_static_ptq_qat",
+            "torch_utils_data_dataloader::multiprocess_workers_and_memory",
+            "torch_amp_mixed_precision::autocast_fp16_bf16"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "dense": {
+          "top_doc_ids": [
+            "torch_cuda_memory_management::caching_allocator_and_empty_cache",
+            "torch_cuda_memory_management::cudnn_benchmark_and_determinism",
+            "torch_tensor_views_contiguity::view_vs_reshape_contiguous",
+            "torch_amp_mixed_precision::gradscaler_underflow_prevention",
+            "torch_utils_data_dataloader::multiprocess_workers_and_memory"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "hybrid": {
+          "top_doc_ids": [
+            "torch_cuda_memory_management::caching_allocator_and_empty_cache",
+            "torch_cuda_memory_management::cudnn_benchmark_and_determinism",
+            "torch_utils_data_dataloader::multiprocess_workers_and_memory",
+            "torch_amp_mixed_precision::gradscaler_underflow_prevention",
+            "torch_compile_dynamo::torch_compile_modes_and_backends"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "Q33",
+      "category": "semantic_conceptual",
+      "query": "Why does GPU driver memory stay reserved after tensors are deleted and how do you return unoccupied blocks to the operating system?",
+      "expected_doc_id": "torch_cuda_memory_management::caching_allocator_and_empty_cache",
+      "latency_ms": 9.746,
+      "results": {
+        "sparse": {
+          "top_doc_ids": [
+            "torch_cuda_memory_management::caching_allocator_and_empty_cache",
+            "torch_utils_data_dataloader::multiprocess_workers_and_memory",
+            "torch_tensor_views_contiguity::view_vs_reshape_contiguous",
+            "torch_serialization_checkpoints::weights_only_security_and_map_location",
+            "torch_nn_grad_clipping::clip_grad_norm_mechanics"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "dense": {
+          "top_doc_ids": [
+            "torch_cuda_memory_management::caching_allocator_and_empty_cache",
+            "torch_autograd_mechanics::detach_and_backward_hooks",
+            "torch_utils_data_dataloader::multiprocess_workers_and_memory",
+            "torch_tensor_views_contiguity::register_buffer_vs_parameter",
+            "torch_tensor_views_contiguity::view_vs_reshape_contiguous"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "hybrid": {
+          "top_doc_ids": [
+            "torch_cuda_memory_management::caching_allocator_and_empty_cache",
+            "torch_utils_data_dataloader::multiprocess_workers_and_memory",
+            "torch_tensor_views_contiguity::view_vs_reshape_contiguous",
+            "torch_autograd_mechanics::detach_and_backward_hooks",
+            "torch_serialization_checkpoints::weights_only_security_and_map_location"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "Q34",
+      "category": "lexical_identifier",
+      "query": "CUBLAS_WORKSPACE_CONFIG=:4096:8",
+      "expected_doc_id": "torch_cuda_memory_management::cudnn_benchmark_and_determinism",
+      "latency_ms": 7.776,
+      "results": {
+        "sparse": {
+          "top_doc_ids": [
+            "torch_cuda_memory_management::cudnn_benchmark_and_determinism",
+            "torch_quantization_ao::dynamic_vs_static_ptq_qat",
+            "torch_amp_mixed_precision::autocast_fp16_bf16",
+            "torch_amp_mixed_precision::gradscaler_underflow_prevention",
+            "torch_autograd_mechanics::inference_mode_vs_no_grad"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "dense": {
+          "top_doc_ids": [
+            "torch_cuda_memory_management::cudnn_benchmark_and_determinism",
+            "torch_utils_data_dataloader::multiprocess_workers_and_memory",
+            "torch_cuda_memory_management::caching_allocator_and_empty_cache",
+            "torch_compile_dynamo::graph_breaks_and_fullgraph",
+            "torch_tensor_views_contiguity::view_vs_reshape_contiguous"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "hybrid": {
+          "top_doc_ids": [
+            "torch_cuda_memory_management::cudnn_benchmark_and_determinism",
+            "torch_quantization_ao::dynamic_vs_static_ptq_qat",
+            "torch_utils_data_dataloader::multiprocess_workers_and_memory",
+            "torch_cuda_memory_management::caching_allocator_and_empty_cache",
+            "torch_compile_dynamo::graph_breaks_and_fullgraph"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "Q35",
+      "category": "hybrid_technical",
+      "query": "Why does calling tensor.view() after transpose() or permute() fail on non-contiguous tensors while tensor.reshape() succeeds?",
+      "expected_doc_id": "torch_tensor_views_contiguity::view_vs_reshape_contiguous",
+      "latency_ms": 11.04,
+      "results": {
+        "sparse": {
+          "top_doc_ids": [
+            "torch_tensor_views_contiguity::view_vs_reshape_contiguous",
+            "torch_utils_data_dataloader::multiprocess_workers_and_memory",
+            "torch_tensor_views_contiguity::register_buffer_vs_parameter",
+            "torch_autograd_mechanics::detach_and_backward_hooks",
+            "torch_autograd_mechanics::inference_mode_vs_no_grad"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "dense": {
+          "top_doc_ids": [
+            "torch_tensor_views_contiguity::view_vs_reshape_contiguous",
+            "torch_nn_multihead_attention::scaled_dot_product_overview",
+            "torch_autograd_mechanics::detach_and_backward_hooks",
+            "torch_cuda_memory_management::caching_allocator_and_empty_cache",
+            "torch_amp_mixed_precision::autocast_fp16_bf16"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "hybrid": {
+          "top_doc_ids": [
+            "torch_tensor_views_contiguity::view_vs_reshape_contiguous",
+            "torch_autograd_mechanics::detach_and_backward_hooks",
+            "torch_tensor_views_contiguity::register_buffer_vs_parameter",
+            "torch_amp_mixed_precision::autocast_fp16_bf16",
+            "torch_cuda_memory_management::caching_allocator_and_empty_cache"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "Q36",
+      "category": "semantic_conceptual",
+      "query": "Attaching non-learnable state tensors to a module so they move to GPU and persist in checkpoints",
+      "expected_doc_id": "torch_tensor_views_contiguity::register_buffer_vs_parameter",
+      "latency_ms": 10.295,
+      "results": {
+        "sparse": {
+          "top_doc_ids": [
+            "torch_serialization_checkpoints::weights_only_security_and_map_location",
+            "torch_tensor_views_contiguity::register_buffer_vs_parameter",
+            "torch_serialization_checkpoints::state_dict_ddp_prefix",
+            "torch_nn_losses::crossentropyloss_logits",
+            "torch_tensor_views_contiguity::view_vs_reshape_contiguous"
+          ],
+          "recall@1": 0.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 0.5
+        },
+        "dense": {
+          "top_doc_ids": [
+            "torch_serialization_checkpoints::weights_only_security_and_map_location",
+            "torch_autograd_mechanics::detach_and_backward_hooks",
+            "torch_tensor_views_contiguity::register_buffer_vs_parameter",
+            "torch_utils_data_dataloader::multiprocess_workers_and_memory",
+            "torch_cuda_memory_management::caching_allocator_and_empty_cache"
+          ],
+          "recall@1": 0.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 0.3333
+        },
+        "hybrid": {
+          "top_doc_ids": [
+            "torch_serialization_checkpoints::weights_only_security_and_map_location",
+            "torch_tensor_views_contiguity::register_buffer_vs_parameter",
+            "torch_serialization_checkpoints::state_dict_ddp_prefix",
+            "torch_utils_data_dataloader::multiprocess_workers_and_memory",
+            "torch_cuda_memory_management::caching_allocator_and_empty_cache"
+          ],
+          "recall@1": 0.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 0.5
+        }
+      }
+    },
+    {
+      "query_id": "Q37",
+      "category": "hybrid_technical",
+      "query": "Compare Dynamic Quantization (quantize_dynamic qint8), Static PTQ (convert_fx), and Quantization-Aware Training (FakeQuantize STE)",
+      "expected_doc_id": "torch_quantization_ao::dynamic_vs_static_ptq_qat",
+      "latency_ms": 9.681,
+      "results": {
+        "sparse": {
+          "top_doc_ids": [
+            "torch_quantization_ao::dynamic_vs_static_ptq_qat",
+            "torch_compile_dynamo::torch_compile_modes_and_backends",
+            "torch_amp_mixed_precision::gradscaler_underflow_prevention",
+            "torch_cuda_memory_management::cudnn_benchmark_and_determinism",
+            "torch_distributed_ddp::ddp_vs_dataparallel"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "dense": {
+          "top_doc_ids": [
+            "torch_quantization_ao::dynamic_vs_static_ptq_qat",
+            "torch_compile_dynamo::torch_compile_modes_and_backends",
+            "torch_nn_multihead_attention::masks_and_fastpath",
+            "torch_cuda_memory_management::cudnn_benchmark_and_determinism",
+            "torch_optim_lr_schedulers::onecyclelr_super_convergence"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "hybrid": {
+          "top_doc_ids": [
+            "torch_quantization_ao::dynamic_vs_static_ptq_qat",
+            "torch_compile_dynamo::torch_compile_modes_and_backends",
+            "torch_cuda_memory_management::cudnn_benchmark_and_determinism",
+            "torch_optim_lr_schedulers::onecyclelr_super_convergence",
+            "torch_utils_data_dataloader::custom_collate_fn_and_samplers"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "Q38",
+      "category": "lexical_identifier",
+      "query": "full_matrices=False U @ diag(S) @ Vh",
+      "expected_doc_id": "torch_linalg_svd_einops::linalg_svd_and_einsum",
+      "latency_ms": 8.129,
+      "results": {
+        "sparse": {
+          "top_doc_ids": [
+            "torch_linalg_svd_einops::linalg_svd_and_einsum",
+            "torch_nn_multihead_attention::masks_and_fastpath",
+            "torch_autograd_mechanics::detach_and_backward_hooks",
+            "torch_utils_data_dataloader::multiprocess_workers_and_memory",
+            "torch_distributed_ddp::ddp_vs_dataparallel"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "dense": {
+          "top_doc_ids": [
+            "torch_linalg_svd_einops::linalg_svd_and_einsum",
+            "torch_nn_multihead_attention::scaled_dot_product_overview",
+            "torch_tensor_views_contiguity::view_vs_reshape_contiguous",
+            "torch_nn_conv2d::shape_and_depthwise_math",
+            "torch_nn_conv2d::signature_and_parameters"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "hybrid": {
+          "top_doc_ids": [
+            "torch_linalg_svd_einops::linalg_svd_and_einsum",
+            "torch_nn_multihead_attention::scaled_dot_product_overview",
+            "torch_nn_multihead_attention::masks_and_fastpath",
+            "torch_tensor_views_contiguity::view_vs_reshape_contiguous",
+            "torch_nn_recurrent_lstm::lstm_architecture_and_gates"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "Q39",
+      "category": "lexical_identifier",
+      "query": "'bhsd,bhtd->bhst'",
+      "expected_doc_id": "torch_linalg_svd_einops::linalg_svd_and_einsum",
+      "latency_ms": 7.428,
+      "results": {
+        "sparse": {
+          "top_doc_ids": [
+            "torch_linalg_svd_einops::linalg_svd_and_einsum",
+            "torch_amp_mixed_precision::autocast_fp16_bf16",
+            "torch_amp_mixed_precision::gradscaler_underflow_prevention",
+            "torch_autograd_mechanics::inference_mode_vs_no_grad",
+            "torch_autograd_mechanics::detach_and_backward_hooks"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "dense": {
+          "top_doc_ids": [
+            "torch_linalg_svd_einops::linalg_svd_and_einsum",
+            "torch_serialization_checkpoints::state_dict_ddp_prefix",
+            "torch_quantization_ao::dynamic_vs_static_ptq_qat",
+            "torch_nn_losses::bcewithlogitsloss_pos_weight",
+            "torch_optim_lr_schedulers::cosine_annealing_warm_restarts"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "hybrid": {
+          "top_doc_ids": [
+            "torch_linalg_svd_einops::linalg_svd_and_einsum",
+            "torch_serialization_checkpoints::state_dict_ddp_prefix",
+            "torch_quantization_ao::dynamic_vs_static_ptq_qat",
+            "torch_nn_losses::bcewithlogitsloss_pos_weight",
+            "torch_optim_lr_schedulers::cosine_annealing_warm_restarts"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "Q40",
+      "category": "semantic_conceptual",
+      "query": "How does dynamic loss scaling recover when a 16-bit backward pass overflows into invalid floating-point numbers?",
+      "expected_doc_id": "torch_amp_mixed_precision::gradscaler_underflow_prevention",
+      "latency_ms": 8.785,
+      "results": {
+        "sparse": {
+          "top_doc_ids": [
+            "torch_amp_mixed_precision::autocast_fp16_bf16",
+            "torch_amp_mixed_precision::gradscaler_underflow_prevention",
+            "torch_nn_losses::crossentropyloss_logits",
+            "torch_quantization_ao::dynamic_vs_static_ptq_qat",
+            "torch_compile_dynamo::torch_compile_modes_and_backends"
+          ],
+          "recall@1": 0.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 0.5
+        },
+        "dense": {
+          "top_doc_ids": [
+            "torch_amp_mixed_precision::gradscaler_underflow_prevention",
+            "torch_amp_mixed_precision::autocast_fp16_bf16",
+            "torch_nn_grad_clipping::clip_grad_norm_mechanics",
+            "torch_nn_losses::bcewithlogitsloss_pos_weight",
+            "torch_optim_adamw::decoupled_weight_decay_math"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "hybrid": {
+          "top_doc_ids": [
+            "torch_amp_mixed_precision::gradscaler_underflow_prevention",
+            "torch_amp_mixed_precision::autocast_fp16_bf16",
+            "torch_nn_losses::crossentropyloss_logits",
+            "torch_nn_losses::bcewithlogitsloss_pos_weight",
+            "torch_nn_grad_clipping::clip_grad_norm_mechanics"
+          ],
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    }
+  ]
+}
